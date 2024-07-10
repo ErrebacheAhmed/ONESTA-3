@@ -1,0 +1,79 @@
+div.dataTables_wrapper div.dataTables_info {
+    padding-top: 0.85em;
+    padding-left: 1rem;
+}
+.table-with-btns div.dataTables_wrapper div.dataTables_info {
+    float: left;
+    padding-top: 7px;
+}
+.table-with-btns .dataTables_paginate {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    padding-top: 0;
+    justify-content: center;
+}
+.dataTables_processing {
+    width: 0;
+    top: 0;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+    width: 64px;
+    height: 64px;
+    right: 0;
+}
+
+.swal2-close:focus {
+    outline: 0;
+    box-shadow: unset;
+}
+
+.input-group-clipboard {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .input-group-addon {
+    border: none;
+  }
+
+  .linkname {
+    display: none;
+  }
+
+  .copyButton {
+    cursor: pointer;
+    background: #f1bb3a;
+    padding: 5px 10px 5px;
+    position: absolute;
+    color: #fff;
+  }
+
+  .copyTarget.form-control {
+    padding-left: 45px;
+  }
+
+  #copyTarget {
+    border-left: none;
+  }
+
+  .copied {
+    opacity: 1;
+    position: absolute;
+    left: 55px;
+    top: -20px;
+  }
+
+  @media (min-width: 768px) {
+    .copied {
+      left: 135px;
+    }
+
+    .linkname {
+      display: block;
+      background: #3b3e45;
+      color: #fff;
+    }
+  }
