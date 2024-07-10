@@ -433,17 +433,16 @@ img {
   width: 100%;
   position: relative;
   padding: 20px;
-  max-width: 560px;
+  max-width: 740px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .curve-image {
-  transform: scale(1.1);
   position: absolute;
   width: 100%;
-  top: 50px;
+  top: 75px;
   left: 0;
   z-index: 1;
   height: auto;
@@ -506,8 +505,9 @@ img {
 
 .testimonial-text {
   font-family: var(--font-stack);
-  font-weight: 400;
+  font-weight: 300;
   line-height: 1.5;
+  font-size: 17.5px;
   margin: 35px;
   z-index: 1;
 }
@@ -889,4 +889,117 @@ img {
 
 .footer-section .text-end {
   text-align: right;
+}
+.mr-top {
+  margin-top: 100px;
+}
+
+body {
+  background-color: #f8f9fa;
+  color: #343a40;
+}
+
+.custom-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f8f9fa;
+}
+
+.custom-content {
+  text-align: left;
+}
+
+.custom-heading {
+  color:#010cee;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.custom-text {
+  font-size: 1.1rem;
+  margin-top: 1rem;
+}
+
+.custom-btn {
+  margin-top: 1.5rem;
+  color: #fff;
+  background-color: #001e80;
+  border-color: #001e80;;
+}
+
+.custom-image {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  margin-left: 2rem;
+}
+
+.custom-image img {
+  width: 100%;
+  border: 5px solid #f8f9fa;
+  border-radius: 5px;
+}
+
+.custom-image::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  width: 100%;
+  height: 100%;
+  border: 5px solid #28a745;
+  z-index: -1;
+}
+
+.custom-image::after {
+  content: '';
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background-color: #0000ff;
+  z-index: -2;
+}
+
+.second-section {
+  background-color: #1419B5;
+  color: white;
+  padding: 50px 0;
+  text-align: center;
+}
+
+.second-section h2 {
+  margin-bottom: 30px;
+}
+
+.second-section .flag-container {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.second-section .flag-container img {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.second-section .table-container {
+  background-color: white;
+  color: black;
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.second-section table {
+  width: 100%;
+}
+
+.second-section table th,
+.second-section table td {
+  padding: 10px;
+  text-align: left;
 }
