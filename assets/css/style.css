@@ -367,6 +367,7 @@ img {
   text-align: left;
   color: #182450;
 }
+
 .testimonial-box {
   background-color: #1419B5;
   color: white;
@@ -392,9 +393,10 @@ img {
 }
 
 .curve-image {
+  transform: scale(1.1);
   position: absolute;
   width: 100%;
-  top: 75px;
+  top: 50px;
   left: 0;
   z-index: 1;
   height: auto;
