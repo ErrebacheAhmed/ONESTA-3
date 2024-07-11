@@ -1372,47 +1372,70 @@ body {
   border-left: none;
 }
 /* cursor */
+/* Cacher la scroll bar pour les navigateurs Webkit (Chrome, Safari, etc.) */
+.custom-menu-slider::-webkit-scrollbar {
+  display: none;
+}
 
-.navigation-menu {
-  margin-top: 17%;
+/* Cacher la scroll bar pour les navigateurs utilisant les préfixes spécifiques */
+.custom-menu-slider {
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.custom-menu-slider .swiper-pagination {
+  display: none;
+}
+
+/* Styles existants */
+.custom-menu-slider {
+  width: 100%;
+  padding: 20px 0;
+  overflow: hidden;
+  background-color: #f8f9fa; /* Ajustez la couleur de fond selon vos besoins */
+}
+
+.custom-slide {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  padding: 20px;
-  background-color: #fdfdf6;
-  overflow: hidden; /* Ensure that items don't overflow the container */
-  position: relative;
-  width: 100%; /* Adjust to fit 5 items */
-}
-
-.menu-item {
-  display: flex;
-  align-items: center;
-  color: #ccc;
-  opacity: 0.3;
-  transition: color 0.3s, opacity 0.3s, transform 0.3s;
-  width: 20%; /* Each item takes up 20% of the container width */
   justify-content: center;
+  text-align: center;
+  opacity: 0.5; /* Opacité pour les slides inactives */
 }
 
-.menu-item img {
-  width: 30px;
-  height: 30px;
-  margin-right: 10px;
+.custom-slide img {
+  width: 50px; /* Ajuster selon vos besoins */
+  height: auto;
+  margin-bottom: 10px;
 }
 
-.menu-item span {
+.custom-slide span {
+  font-family: 'Poppins', sans-serif;
   font-size: 14px;
+  color: #6c757d; /* Couleur du texte inactif */
 }
 
-.menu-item.active {
-  color: #3b4a54;
+.active-slide {
+  opacity: 1; /* Opacité pour le slide actif */
+}
+
+.active-slide span {
+  font-weight: bold;
+  color: #343a40; /* Couleur du texte actif */
+}
+
+.custom-pagination .swiper-pagination-bullet {
+  background-color: #6c757d;
   opacity: 1;
+  width: 10px;
+  height: 10px;
 }
 
-.menu-item:hover {
-  cursor: pointer;
-  color: #3b4a54;
+.custom-pagination .swiper-pagination-bullet-active {
+  background-color: #343a40;
+  width: 40px;
+  border-radius: 5px;
 }
 
 /* cursor */
