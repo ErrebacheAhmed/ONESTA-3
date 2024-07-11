@@ -300,16 +300,13 @@
                   <div class="testimonial-author">
                     <img src="images/delivery1.png" alt="Omar Fikri" class="author-image" />
                     <div class="author-info">
-                      <h5 data-author-name>Omar Fikri</h5>
+                      <h5 data-author-name>Omar Fikri1</h5>
                       <p data-author-title>Cosmetics Brand Owner</p>
                     </div>
                   </div>
                 </div>
                 <p class="testimonial-text" data-testimonial-text>
-                  It's a delivery service, we have finally accomplished things that
-                  I have been waiting to get done. I would recommend this service
-                  for anyone trying to get the word out. It has saved me so much
-                  time!
+                  It's a delivery1 service, we have finally accomplished things that I have been waiting to get done. I would recommend this service for anyone trying to get the word out. It has saved me so much time!
                 </p>
                 <img src="images/DOWN.png" alt="Quotation Marks Right" class="quotation-marks-right" />
                 <div class="slider-indicator">
@@ -322,6 +319,15 @@
               </div>
               <img src="images/Vector 5.png" alt="Curve" class="curve-image" />
             </div>
+            
+            <!-- Add the hidden testimonials -->
+            <div id="testimonials" style="display: none;">
+              <div class="testimonial" data-name="Omar Fikri2" data-title="Cosmetics Brand Owner" data-text="It's a delivery2 service, we have finally accomplished things that I have been waiting to get done. I would recommend this service for anyone trying to get the word out. It has saved me so much time!" data-image="images/delivery1.png"></div>
+              <div class="testimonial" data-name="Omar Fikri3" data-title="Cosmetics Brand Owner" data-text="It's a delivery3 service, we have finally accomplished things that I have been waiting to get done. I would recommend this service for anyone trying to get the word out. It has saved me so much time!" data-image="images/delivery1.png"></div>
+              <div class="testimonial" data-name="Omar Fikri4" data-title="Cosmetics Brand Owner" data-text="It's a delivery4 service, we have finally accomplished things that I have been waiting to get done. I would recommend this service for anyone trying to get the word out. It has saved me so much time!" data-image="images/delivery1.png"></div>
+              <div class="testimonial" data-name="Omar Fikri5" data-title="Cosmetics Brand Owner" data-text="It's a delivery5 service, we have finally accomplished things that I have been waiting to get done. I would recommend this service for anyone trying to get the word out. It has saved me so much time!" data-image="images/delivery1.png"></div>
+            </div>
+            
           </div>
         </div>
       </div>
@@ -624,190 +630,159 @@
     <!-- Bootstrap JS -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <!-- Custom JS -->
-    <script>
-const testimonials = [
-        {
-          name: "Omar Fikri1",
-          title: "Cosmetics Brand Owner",
-          text: "It's a delivery1 service, we have finally accomplished things that I have been waiting to get done. I would recommend this service for anyone trying to get the word out. It has saved me so much time!",
-          image: "images/delivery1.png"
-        },
-        {
-          name: "Omar Fikri2",
-          title: "Cosmetics Brand Owner",
-          text: "It's a delivery2 service, we have finally accomplished things that I have been waiting to get done. I would recommend this service for anyone trying to get the word out. It has saved me so much time!",
-          image: "images/delivery1.png"
-        },
-        {
-          name: "Omar Fikri3",
-          title: "Cosmetics Brand Owner",
-          text: "It's a delivery3 service, we have finally accomplished things that I have been waiting to get done. I would recommend this service for anyone trying to get the word out. It has saved me so much time!",
-          image: "images/delivery1.png"
-        },
-        {
-          name: "Omar Fikri4",
-          title: "Cosmetics Brand Owner",
-          text: "It's a delivery4 service, we have finally accomplished things that I have been waiting to get done. I would recommend this service for anyone trying to get the word out. It has saved me so much time!",
-          image: "images/delivery1.png"
-        },
-        {
-          name: "Omar Fikri5",
-          title: "Cosmetics Brand Owner",
-          text: "It's a delivery5 service, we have finally accomplished things that I have been waiting to get done. I would recommend this service for anyone trying to get the word out. It has saved me so much time!",
-          image: "images/delivery1.png"
-        },
-       
-      ];
-    
-      function showTestimonial(index) {
-        const authorName = document.querySelector('[data-author-name]');
-        const authorTitle = document.querySelector('[data-author-title]');
-        const testimonialText = document.querySelector('[data-testimonial-text]');
-        const authorImage = document.querySelector('.author-image');
-        
-        authorName.textContent = testimonials[index].name;
-        authorTitle.textContent = testimonials[index].title;
-        testimonialText.textContent = testimonials[index].text;
-        authorImage.src = testimonials[index].image;
-    
-        // Mettre à jour les points d'indicateur
-        const dots = document.querySelectorAll('.dot');
-        dots.forEach(dot => dot.classList.remove('active'));
-        dots[index].classList.add('active');
-      }
-    
-      // Initialiser avec le premier témoignage
-      showTestimonial(0);
+   <script>
+    // Testimonial Functionality
+function showTestimonial(index) {
+  const testimonials = document.querySelectorAll('#testimonials .testimonial');
+  const testimonial = testimonials[index];
 
-      // cursor
-      document.addEventListener('DOMContentLoaded', () => {
-    let currentIndex = 2; // Index of the initially active item
-    const items = document.querySelectorAll('.menu-item');
-    const itemCount = items.length;
-    let isDragging = false;
-    let startX = 0;
-    let currentTranslate = 0;
-    let prevTranslate = 0;
-    let autoMoveInterval;
+  const authorName = document.querySelector('[data-author-name]');
+  const authorTitle = document.querySelector('[data-author-title]');
+  const testimonialText = document.querySelector('[data-testimonial-text]');
+  const authorImage = document.querySelector('.author-image');
 
-    function updateSlider() {
-        items.forEach((item, index) => {
-            item.classList.remove('active');
-            item.style.opacity = '0.3';
-            item.style.transform = `translateX(${(index - currentIndex) * 100}%)`;
-            item.style.transition = 'opacity 0.3s, transform 0.3s';
-        });
+  authorName.textContent = testimonial.getAttribute('data-name');
+  authorTitle.textContent = testimonial.getAttribute('data-title');
+  testimonialText.textContent = testimonial.getAttribute('data-text');
+  authorImage.src = testimonial.getAttribute('data-image');
 
-        items[currentIndex].classList.add('active');
-        items[currentIndex].style.opacity = '1';
+  // Update the indicator dots
+  const dots = document.querySelectorAll('.dot');
+  dots.forEach(dot => dot.classList.remove('active'));
+  dots[index].classList.add('active');
+}
 
-        const leftIndex1 = (currentIndex - 1 + itemCount) % itemCount;
-        const rightIndex1 = (currentIndex + 1) % itemCount;
-        items[leftIndex1].style.opacity = '0.5';
-        items[rightIndex1].style.opacity = '0.5';
+// Initialize with the first testimonial
+showTestimonial(0);
 
-        const leftIndex2 = (currentIndex - 2 + itemCount) % itemCount;
-        const rightIndex2 = (currentIndex + 2) % itemCount;
-        items[leftIndex2].style.opacity = '0.3';
-        items[rightIndex2].style.opacity = '0.3';
-    }
+// Cursor Navigation Functionality
+document.addEventListener('DOMContentLoaded', () => {
+  let currentIndex = 2; // Index of the initially active item
+  const items = document.querySelectorAll('.menu-item');
+  const itemCount = items.length;
+  let isDragging = false;
+  let startX = 0;
+  let currentTranslate = 0;
+  let prevTranslate = 0;
+  let autoMoveInterval;
 
-    function nextItem() {
-        currentIndex = (currentIndex + 1) % itemCount;
-        updateSlider();
-    }
-
-    function prevItem() {
-        currentIndex = (currentIndex - 1 + itemCount) % itemCount;
-        updateSlider();
-    }
-
-    // Click event
+  function updateSlider() {
     items.forEach((item, index) => {
-        item.addEventListener('click', () => {
-            currentIndex = index;
-            updateSlider();
-        });
+      item.classList.remove('active');
+      item.style.opacity = '0.3';
+      item.style.transform = `translateX(${(index - currentIndex) * 100}%)`;
+      item.style.transition = 'opacity 0.3s, transform 0.3s';
     });
 
-    // Keyboard navigation
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'ArrowRight') {
-            clearInterval(autoMoveInterval); // Stop auto movement
-            nextItem();
-            startAutoMove(); // Restart auto movement
-        } else if (e.key === 'ArrowLeft') {
-            clearInterval(autoMoveInterval); // Stop auto movement
-            prevItem();
-            startAutoMove(); // Restart auto movement
-        }
-    });
+    items[currentIndex].classList.add('active');
+    items[currentIndex].style.opacity = '1';
 
-    // Mouse dragging events
-    const navigationMenu = document.querySelector('.navigation-menu');
-    navigationMenu.addEventListener('mousedown', (e) => {
-        isDragging = true;
-        startX = e.clientX;
-        navigationMenu.style.cursor = 'grabbing';
-        clearInterval(autoMoveInterval); // Stop auto movement when dragging
-    });
+    const leftIndex1 = (currentIndex - 1 + itemCount) % itemCount;
+    const rightIndex1 = (currentIndex + 1) % itemCount;
+    items[leftIndex1].style.opacity = '0.5';
+    items[rightIndex1].style.opacity = '0.5';
 
-    navigationMenu.addEventListener('mousemove', (e) => {
-        if (isDragging) {
-            const currentX = e.clientX;
-            const deltaX = currentX - startX;
-            currentTranslate = prevTranslate + deltaX;
-            navigationMenu.style.transform = `translateX(${currentTranslate}px)`;
-        }
-    });
+    const leftIndex2 = (currentIndex - 2 + itemCount) % itemCount;
+    const rightIndex2 = (currentIndex + 2) % itemCount;
+    items[leftIndex2].style.opacity = '0.3';
+    items[rightIndex2].style.opacity = '0.3';
+  }
 
-    navigationMenu.addEventListener('mouseup', () => {
-        isDragging = false;
-        navigationMenu.style.cursor = 'grab';
-        const movedBy = Math.round(currentTranslate / navigationMenu.clientWidth);
-        currentIndex = (currentIndex - movedBy + itemCount) % itemCount;
-        updateSlider();
-        prevTranslate = 0;
-        currentTranslate = 0;
-        navigationMenu.style.transform = 'translateX(0)';
-        startAutoMove(); // Restart auto movement after dragging
-    });
-
-    navigationMenu.addEventListener('mouseleave', () => {
-        if (isDragging) {
-            isDragging = false;
-            navigationMenu.style.cursor = 'grab';
-            const movedBy = Math.round(currentTranslate / navigationMenu.clientWidth);
-            currentIndex = (currentIndex - movedBy + itemCount) % itemCount;
-            updateSlider();
-            prevTranslate = 0;
-            currentTranslate = 0;
-            navigationMenu.style.transform = 'translateX(0)';
-            startAutoMove(); // Restart auto movement after dragging
-        }
-    });
-
-    // Stop automatic movement on hover
-    navigationMenu.addEventListener('mouseenter', () => {
-        clearInterval(autoMoveInterval); // Stop auto movement on hover
-    });
-
-    navigationMenu.addEventListener('mouseleave', () => {
-        startAutoMove(); // Restart auto movement after hover
-    });
-
-    // Automatic movement
-    function startAutoMove() {
-        autoMoveInterval = setInterval(nextItem, 2000); // Move to the next item every second
-    }
-
-    // Initial slider setup
+  function nextItem() {
+    currentIndex = (currentIndex + 1) % itemCount;
     updateSlider();
-    startAutoMove();
+  }
+
+  function prevItem() {
+    currentIndex = (currentIndex - 1 + itemCount) % itemCount;
+    updateSlider();
+  }
+
+  // Click event
+  items.forEach((item, index) => {
+    item.addEventListener('click', () => {
+      currentIndex = index;
+      updateSlider();
+    });
+  });
+
+  // Keyboard navigation
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowRight') {
+      clearInterval(autoMoveInterval); // Stop auto movement
+      nextItem();
+      startAutoMove(); // Restart auto movement
+    } else if (e.key === 'ArrowLeft') {
+      clearInterval(autoMoveInterval); // Stop auto movement
+      prevItem();
+      startAutoMove(); // Restart auto movement
+    }
+  });
+
+  // Mouse dragging events
+  const navigationMenu = document.querySelector('.navigation-menu');
+  navigationMenu.addEventListener('mousedown', (e) => {
+    isDragging = true;
+    startX = e.clientX;
+    navigationMenu.style.cursor = 'grabbing';
+    clearInterval(autoMoveInterval); // Stop auto movement when dragging
+  });
+
+  navigationMenu.addEventListener('mousemove', (e) => {
+    if (isDragging) {
+      const currentX = e.clientX;
+      const deltaX = currentX - startX;
+      currentTranslate = prevTranslate + deltaX;
+      navigationMenu.style.transform = `translateX(${currentTranslate}px)`;
+    }
+  });
+
+  navigationMenu.addEventListener('mouseup', () => {
+    isDragging = false;
+    navigationMenu.style.cursor = 'grab';
+    const movedBy = Math.round(currentTranslate / navigationMenu.clientWidth);
+    currentIndex = (currentIndex - movedBy + itemCount) % itemCount;
+    updateSlider();
+    prevTranslate = 0;
+    currentTranslate = 0;
+    navigationMenu.style.transform = 'translateX(0)';
+    startAutoMove(); // Restart auto movement after dragging
+  });
+
+  navigationMenu.addEventListener('mouseleave', () => {
+    if (isDragging) {
+      isDragging = false;
+      navigationMenu.style.cursor = 'grab';
+      const movedBy = Math.round(currentTranslate / navigationMenu.clientWidth);
+      currentIndex = (currentIndex - movedBy + itemCount) % itemCount;
+      updateSlider();
+      prevTranslate = 0;
+      currentTranslate = 0;
+      navigationMenu.style.transform = 'translateX(0)';
+      startAutoMove(); // Restart auto movement after dragging
+    }
+  });
+
+  // Stop automatic movement on hover
+  navigationMenu.addEventListener('mouseenter', () => {
+    clearInterval(autoMoveInterval); // Stop auto movement on hover
+  });
+
+  navigationMenu.addEventListener('mouseleave', () => {
+    startAutoMove(); // Restart auto movement after hover
+  });
+
+  // Automatic movement
+  function startAutoMove() {
+    autoMoveInterval = setInterval(nextItem, 2000); // Move to the next item every 2 seconds
+  }
+
+  // Initial slider setup
+  updateSlider();
+  startAutoMove();
 });
 
-      // cursor
-    </script>
+   </script>
     
   </body>
 </html>
