@@ -390,10 +390,9 @@ img {
 .desk-image img {
   position: absolute;
   right: 0;
-  bottom: 0; /* Anchor the image to the bottom of the section */
+  bottom: 0;
   max-width: 74%;
   z-index: 2;
-  /* Remove or adjust the top property to avoid overlap issues */
 }
 
 .process-section {
@@ -404,15 +403,175 @@ img {
   width: 100%;
   margin: auto;
 }
+
+/* client success section  */
 .client-success-section {
   padding: 200px 0;
   background: linear-gradient(360deg, #C7F0FD 0%, rgba(255, 255, 255, 0) 100%);
   position: relative;
-  z-index: 1; /* Ensure this section is above other elements */ /* Ensure this section is above other elements */
+  z-index: 1;
+}
+
+.client-success-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 38px;
+  font-weight: 800;
+  line-height: 41.61px;
+  text-align: left;
+  color: #0500FF;
+}
+
+.client-success-description {
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 23.35px;
+  text-align: left;
+  color: #182450;
+}
+
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.testimonial-box {
+  background-color: #1419b5;
+  color: white;
+  border-radius: 15px;
+  padding: 60px;
+  text-align: center;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.testimonial-content {
+  width: 100%;
+  position: relative;
+  padding: 20px;
+  max-width: 740px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Centrer verticalement */
+  height: 100%; /* Prendre toute la hauteur */
+}
+
+.curve-image {
+  position: absolute;
+  width: 100%;
+  top: 35px;
+  left: 0;
+  z-index: 1;
+  height: auto;
+}
+
+.quotation-marks-left,
+.quotation-marks-right {
+  position: absolute;
+  width: 50px;
+  z-index: 1;
+}
+
+.quotation-marks-left {
+  left: 65px;
+  top: 30px;
+}
+
+.quotation-marks-right {
+  right: 45px;
+  bottom: -45px;
+}
+
+.testimonial-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  z-index: 1;
+}
+
+.author-image {
+  width: 69px;
+  height: 69px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.author-info {
+  text-align: left;
+}
+
+.author-info h5 {
+  font-family: var(--font-stack);
+  color: white;
+  margin: 0;
+  font-weight: 600;
+}
+
+.author-info p {
+  font-family: var(--font-stack);
+  font-weight: 300;
+  margin: 0;
+}
+
+.testimonial-text {
+  font-family: var(--font-stack);
+  font-weight: 300;
+  line-height: 1.5;
+  font-size: 17.5px;
+  margin: 35px;
+  z-index: 1;
+}
+
+.swiper-pagination {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  z-index: 2;
+}
+
+.swiper-pagination .swiper-pagination-bullet {
+  background-color: #4B7BD1;
+  opacity: 1;
+  width: 10px;
+  height: 10px;
+}
+
+.swiper-pagination .swiper-pagination-bullet-active {
+  background-color: #D9FF00;
+  width: 40px;
+  border-radius: 5px;
+}
+
+
+
+/* .client-success-section {
+  padding: 200px 0;
+  background: linear-gradient(360deg, #C7F0FD 0%, rgba(255, 255, 255, 0) 100%);
+  position: relative;
+  z-index: 1; 
 }
 .client-success-section {
-  position: relative; /* Ensure this section is relative for absolute positioning inside */
-  z-index: 1; /* Ensure this section is above other elements */
+  position: relative;
+  z-index: 1;
   padding: 200px 0;
   background: linear-gradient(360deg, #C7F0FD 0%, rgba(255, 255, 255, 0) 100%);
 }
@@ -475,7 +634,7 @@ img {
 .quotation-marks-right {
   position: absolute;
   width: 50px;
-  z-index: 1; /* Assurez-vous que les guillemets sont au-dessus de la courbe */
+  z-index: 1;
 }
 
 .quotation-marks-left {
@@ -493,7 +652,7 @@ img {
   align-items: center;
   justify-content: center;
   position: relative;
-  z-index: 1; /* Assurez-vous que le contenu est au-dessus de la courbe */
+  z-index: 1;
 }
 
 .testimonial-author {
@@ -536,13 +695,13 @@ img {
 }
 .slider-indicator {
   position: absolute;
-  bottom: -20px; /* Adjust as needed to position above the curve image */
+  bottom: -20px; 
   left: 50%;
   transform: translateX(-50%);
   display: flex;
   justify-content: center;
   width: 100%;
-  z-index: 2; /* Ensure indicators are above the curve image */
+  z-index: 2;
 }
 
 .dot {
@@ -560,8 +719,9 @@ img {
   width: 40px;
   background-color: #D9FF00;
   border-radius: 5px;
-}
+} */
 
+/* Delivery section */
 .delivery-section {
   background-color: #f9fafb;
 }

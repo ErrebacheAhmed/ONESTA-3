@@ -40,6 +40,8 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   </head>
 
   <body data-bs-spy="scroll" data-bs-target="#navbar-example">
@@ -265,7 +267,7 @@
       />
     </section>
 
-    
+<!--     
     <section class="section client-success-section">
       <div class="container">
         <div class="row align-items-center">
@@ -297,7 +299,7 @@
 
             <div id="testimonial-container" class="testimonial-box">
               <div class="testimonial-content">
-                <img src="images/UP.png" alt="Quotation Marks Left" class="quotation-marks-left" />
+                <img src="images/up.png" alt="Quotation Marks Left" class="quotation-marks-left" />
                 <div class="testimonial-header">
                   <div class="testimonial-author">
                     <img src="images/delivery1.png" alt="Omar Fikri" class="author-image" />
@@ -310,30 +312,116 @@
                 <p class="testimonial-text" data-testimonial-text>
                   It's a delivery1 service, we have finally accomplished things that I have been waiting to get done. I would recommend this service for anyone trying to get the word out. It has saved me so much time!
                 </p>
-                <img src="images/DOWN.png" alt="Quotation Marks Right" class="quotation-marks-right" />
+                <img src="images/down.png" alt="Quotation Marks Right" class="quotation-marks-right" />
                 <div class="slider-indicator">
-                  <span class="dot" onclick="showTestimonial(0)"></span>
-                  <span class="dot active" onclick="showTestimonial(1)"></span>
-                  <span class="dot" onclick="showTestimonial(2)"></span>
-                  <span class="dot" onclick="showTestimonial(3)"></span>
-                  <span class="dot" onclick="showTestimonial(4)"></span>
+                  <span class="dot"></span>
+                  <span class="dot active"></span>
+                  <span class="dot"></span>
+                  <span class="dot"></span>
+                  <span class="dot"></span>
                 </div>
               </div>
             </div>
-            
-            <!-- Add the hidden testimonials -->
-            <div id="testimonials" style="display: none;">
-              <div class="testimonial" data-name="Omar Fikri2" data-title="Cosmetics Brand Owner" data-text="It's a delivery2 service, we have finally accomplished things that I have been waiting to get done. I would recommend this service for anyone trying to get the word out. It has saved me so much time!" data-image="images/delivery1.png"></div>
-              <div class="testimonial" data-name="Omar Fikri3" data-title="Cosmetics Brand Owner" data-text="It's a delivery3 service, we have finally accomplished things that I have been waiting to get done. I would recommend this service for anyone trying to get the word out. It has saved me so much time!" data-image="images/delivery1.png"></div>
-              <div class="testimonial" data-name="Omar Fikri4" data-title="Cosmetics Brand Owner" data-text="It's a delivery4 service, we have finally accomplished things that I have been waiting to get done. I would recommend this service for anyone trying to get the word out. It has saved me so much time!" data-image="images/delivery1.png"></div>
-              <div class="testimonial" data-name="Omar Fikri5" data-title="Cosmetics Brand Owner" data-text="It's a delivery5 service, we have finally accomplished things that I have been waiting to get done. I would recommend this service for anyone trying to get the word out. It has saved me so much time!" data-image="images/delivery1.png"></div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+    
+    <section class="section client-success-section">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <img src="images/img2.png" alt="Client Image" class="img-fluid" />
+          </div>
+          <div class="col-lg-6">
+            <h2 class="client-success-title">
+              Chérissez vos clients, assurez le succès
+            </h2>
+            <p class="client-success-description">
+              Caring for your clients is the cornerstone of lasting success.
+              Prioritizing their needs and building strong relationships is the key
+              to a thriving business.
+            </p>
+            <p class="client-success-description">
+              In business, client care is the bedrock of success. Prioritizing their
+              needs, fostering trust, and going the extra mile ensure lasting growth
+              and prosperity.
+            </p>
+            <a href="#" class="btn btn-primary">
+              Livrer maintenant <span class="arrow-icon">></span>
+            </a>
+          </div>
+        </div>
+        <div class="row mt-5">
+          <div class="col-lg-12">
+            <img src="images/Vector 5.png" alt="Curve" class="curve-image" />
+            <div class="testimonial-box">
+              <img src="images/up.png" alt="Quotation Marks Left" class="quotation-marks-left" />
+              <div class="swiper-container">
+                <div class="swiper-wrapper">
+                  <!-- Slide 1 -->
+                  <div class="swiper-slide">
+                    <div class="testimonial-content">
+                      <div class="testimonial-header">
+                        <div class="testimonial-author">
+                          <img src="images/delivery1.png" alt="Omar Fikri" class="author-image" />
+                          <div class="author-info">
+                            <h5>Omar Fikri</h5>
+                            <p>Cosmetics Brand Owner</p>
+                          </div>
+                        </div>
+                      </div>
+                      <p class="testimonial-text">
+                        It's a delivery service, we have finally accomplished things that I have been waiting to get done. I would recommend this service for anyone trying to get the word out. It has saved me so much time!
+                      </p>
+                    </div>
+                  </div>
+                  <!-- Slide 2 -->
+                  <div class="swiper-slide">
+                    <div class="testimonial-content">
+                      <div class="testimonial-header">
+                        <div class="testimonial-author">
+                          <img src="images/delivery2.png" alt="Amira Zohra" class="author-image" />
+                          <div class="author-info">
+                            <h5>Amira Zohra</h5>
+                            <p>Food Business Owner</p>
+                          </div>
+                        </div>
+                      </div>
+                      <p class="testimonial-text">
+                        The service was exceptional and timely. I highly recommend it for anyone needing reliable delivery.
+                      </p>
+                    </div>
+                  </div>
+                  <!-- Slide 3 -->
+                  <div class="swiper-slide">
+                    <div class="testimonial-content">
+                      <div class="testimonial-header">
+                        <div class="testimonial-author">
+                          <img src="images/delivery3.png" alt="Youssef Karim" class="author-image" />
+                          <div class="author-info">
+                            <h5>Youssef Karim</h5>
+                            <p>Tech Entrepreneur</p>
+                          </div>
+                        </div>
+                      </div>
+                      <p class="testimonial-text">
+                        Fast and efficient delivery service that I will definitely use again. Kudos to the team!
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+              </div>
+              <img src="images/down.png" alt="Quotation Marks Right" class="quotation-marks-right" />
             </div>
-            
           </div>
         </div>
       </div>
     </section>
     
+
 
     <div class="navigation-menu">
       <div class="menu-item"><img src="images/Company logo.png" alt="icon"><span>Layers</span></div>
@@ -690,6 +778,14 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <!-- Custom JS -->
    
-    
+    <script>
+      var swiper = new Swiper('.swiper-container', {
+        loop: true,
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+      });
+    </script>
   </body>
 </html>
