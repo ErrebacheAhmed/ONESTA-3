@@ -287,21 +287,22 @@ img {
 
 /* Highlight Span */
 .highlight {
-    border-radius: 25px;
-    position: absolute;
-    top: 132%;
-    left: 115px;
-    width: 136px;
-    height: 6px;
-    background-color: #D1FB01;
-    transform: translateY(-50%);
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
+  border-radius: 25px;
+  position: absolute;
+  top: 132%;
+  left: 115px;
+  width: 136px;
+  height: 6px;
+  background-color: #D1FB01;
+  transform: translateY(-50%);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
 }
 
 .feature-box:hover .highlight {
-    opacity: 1;
+  opacity: 1;
 }
+
 
 /* Section Styles */
 .user-experience-section {
