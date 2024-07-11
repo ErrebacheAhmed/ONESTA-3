@@ -985,7 +985,6 @@ body {
   padding: 50px 0;
   text-align: center;
   position: relative;
-  overflow: hidden; 
   min-height: 800px;
 }
 
@@ -1004,8 +1003,12 @@ body {
 }
 
 .second-section .text-table-container {
-  position: relative;
-  z-index: 1;
+  position: absolute;
+  right: 150px;
+  bottom: -180px;
+  height: 600px;
+  z-index: 3;
+  min-width: 40%;
 }
 
 .second-section .table-container {
@@ -1045,18 +1048,23 @@ body {
 .navigation-menu {
   margin-top: 17%;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   padding: 20px;
   background-color: #fdfdf6;
+  overflow: hidden; /* Ensure that items don't overflow the container */
+  position: relative;
+  width: 100%; /* Adjust to fit 5 items */
 }
 
 .menu-item {
   display: flex;
   align-items: center;
   color: #ccc;
-  opacity: 0.5;
-  transition: color 0.3s, opacity 0.3s;
+  opacity: 0.3;
+  transition: color 0.3s, opacity 0.3s, transform 0.3s;
+  width: 20%; /* Each item takes up 20% of the container width */
+  justify-content: center;
 }
 
 .menu-item img {
@@ -1078,4 +1086,5 @@ body {
   cursor: pointer;
   color: #3b4a54;
 }
+
 /* cursor */
