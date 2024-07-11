@@ -379,9 +379,10 @@ img {
 .desk-image img {
   position: absolute;
   right: 0;
-  top: -72%;
+  bottom: 0; /* Anchor the image to the bottom of the section */
   max-width: 74%;
   z-index: 2;
+  /* Remove or adjust the top property to avoid overlap issues */
 }
 
 .process-section {
