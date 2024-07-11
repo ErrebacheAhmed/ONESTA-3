@@ -330,12 +330,16 @@
 
     <div class="navigation-menu">
       <div class="menu-item"><img src="images/Company logo.png" alt="icon"><span>Layers</span></div>
+      <div class="menu-item"><img src="images/Company logo.png" alt="icon"><span>Layers</span></div>
+      <div class="menu-item"><img src="images/Company logo.png" alt="icon"><span>Layers</span></div>
+      <div class="menu-item"><img src="images/Company logo.png" alt="icon"><span>Layers</span></div>
       <div class="menu-item"><img src="images/Company logo.png" alt="icon"><span>Sisyphus</span></div>
       <div class="menu-item"><img src="images/Company logo.png" alt="icon"><span>Circooles</span></div>
       <div class="menu-item active"><img src="images/Company logo.png" alt="icon"><span>Catalog</span></div>
       <div class="menu-item"><img src="images/Company logo.png" alt="icon"><span>Sisyphus</span></div>
-      
   </div>
+  
+  
       
       
     <section class="section delivery-section">
@@ -680,12 +684,18 @@ const testimonials = [
     let currentIndex = 2; // Index of the initially active item
     const items = document.querySelectorAll('.menu-item');
     const itemCount = items.length;
+    let isDragging = false;
+    let startX = 0;
+    let currentTranslate = 0;
+    let prevTranslate = 0;
+    let autoMoveInterval;
 
-    function updateOpacity() {
+    function updateSlider() {
         items.forEach((item, index) => {
             item.classList.remove('active');
-            item.style.opacity = '0.5';
-            item.style.transition = 'opacity 0.3s';
+            item.style.opacity = '0.3';
+            item.style.transform = `translateX(${(index - currentIndex) * 100}%)`;
+            item.style.transition = 'opacity 0.3s, transform 0.3s';
         });
 
         items[currentIndex].classList.add('active');
@@ -693,43 +703,108 @@ const testimonials = [
 
         const leftIndex1 = (currentIndex - 1 + itemCount) % itemCount;
         const rightIndex1 = (currentIndex + 1) % itemCount;
-        items[leftIndex1].style.opacity = '0.8';
-        items[rightIndex1].style.opacity = '0.8';
+        items[leftIndex1].style.opacity = '0.5';
+        items[rightIndex1].style.opacity = '0.5';
 
         const leftIndex2 = (currentIndex - 2 + itemCount) % itemCount;
         const rightIndex2 = (currentIndex + 2) % itemCount;
-        items[leftIndex2].style.opacity = '0.5';
-        items[rightIndex2].style.opacity = '0.5';
+        items[leftIndex2].style.opacity = '0.3';
+        items[rightIndex2].style.opacity = '0.3';
     }
 
     function nextItem() {
         currentIndex = (currentIndex + 1) % itemCount;
-        updateOpacity();
+        updateSlider();
+    }
+
+    function prevItem() {
+        currentIndex = (currentIndex - 1 + itemCount) % itemCount;
+        updateSlider();
     }
 
     // Click event
     items.forEach((item, index) => {
         item.addEventListener('click', () => {
             currentIndex = index;
-            updateOpacity();
+            updateSlider();
         });
     });
 
     // Keyboard navigation
     document.addEventListener('keydown', (e) => {
         if (e.key === 'ArrowRight') {
+            clearInterval(autoMoveInterval); // Stop auto movement
             nextItem();
+            startAutoMove(); // Restart auto movement
         } else if (e.key === 'ArrowLeft') {
-            currentIndex = (currentIndex - 1 + itemCount) % itemCount;
-            updateOpacity();
+            clearInterval(autoMoveInterval); // Stop auto movement
+            prevItem();
+            startAutoMove(); // Restart auto movement
         }
     });
 
-    // Initial opacity setup
-    updateOpacity();
+    // Mouse dragging events
+    const navigationMenu = document.querySelector('.navigation-menu');
+    navigationMenu.addEventListener('mousedown', (e) => {
+        isDragging = true;
+        startX = e.clientX;
+        navigationMenu.style.cursor = 'grabbing';
+        clearInterval(autoMoveInterval); // Stop auto movement when dragging
+    });
+
+    navigationMenu.addEventListener('mousemove', (e) => {
+        if (isDragging) {
+            const currentX = e.clientX;
+            const deltaX = currentX - startX;
+            currentTranslate = prevTranslate + deltaX;
+            navigationMenu.style.transform = `translateX(${currentTranslate}px)`;
+        }
+    });
+
+    navigationMenu.addEventListener('mouseup', () => {
+        isDragging = false;
+        navigationMenu.style.cursor = 'grab';
+        const movedBy = Math.round(currentTranslate / navigationMenu.clientWidth);
+        currentIndex = (currentIndex - movedBy + itemCount) % itemCount;
+        updateSlider();
+        prevTranslate = 0;
+        currentTranslate = 0;
+        navigationMenu.style.transform = 'translateX(0)';
+        startAutoMove(); // Restart auto movement after dragging
+    });
+
+    navigationMenu.addEventListener('mouseleave', () => {
+        if (isDragging) {
+            isDragging = false;
+            navigationMenu.style.cursor = 'grab';
+            const movedBy = Math.round(currentTranslate / navigationMenu.clientWidth);
+            currentIndex = (currentIndex - movedBy + itemCount) % itemCount;
+            updateSlider();
+            prevTranslate = 0;
+            currentTranslate = 0;
+            navigationMenu.style.transform = 'translateX(0)';
+            startAutoMove(); // Restart auto movement after dragging
+        }
+    });
+
+    // Stop automatic movement on hover
+    navigationMenu.addEventListener('mouseenter', () => {
+        clearInterval(autoMoveInterval); // Stop auto movement on hover
+    });
+
+    navigationMenu.addEventListener('mouseleave', () => {
+        startAutoMove(); // Restart auto movement after hover
+    });
+
+    // Automatic movement
+    function startAutoMove() {
+        autoMoveInterval = setInterval(nextItem, 2000); // Move to the next item every second
+    }
+
+    // Initial slider setup
+    updateSlider();
+    startAutoMove();
 });
-
-
 
       // cursor
     </script>
