@@ -1015,8 +1015,17 @@ body {
 }
 
 .custom-image {
+  top: 140px;
   position: relative;
   width: 100%;
+  max-width: 500px;
+  margin-left: 2rem;
+  z-index: 4;
+}
+.custom-image-rectongle {
+  position: relative;
+  width: 100%;
+  top: 60px;
   max-width: 500px;
   margin-left: 2rem;
   z-index: 3;
