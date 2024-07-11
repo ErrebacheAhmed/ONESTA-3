@@ -528,6 +528,7 @@ img {
 }
 /* Delivery Section Styles */
 .delivery-section {
+  margin-top: 150px;
   background-color: #f9fafb;
 }
 
@@ -577,6 +578,7 @@ img {
 .delivery-section .col-lg-6 {
   flex: 1;
 }
+
 /* Success Section Styles */
 .success-section {
   padding: 60px 0;
