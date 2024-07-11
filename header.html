@@ -236,16 +236,13 @@
                   <div class="testimonial-author">
                     <img src="images/delivery1.png" alt="Omar Fikri" class="author-image" />
                     <div class="author-info">
-                      <h5 data-author-name>Omar Fikri</h5>
+                      <h5 data-author-name>Omar Fikri1</h5>
                       <p data-author-title>Cosmetics Brand Owner</p>
                     </div>
                   </div>
                 </div>
                 <p class="testimonial-text" data-testimonial-text>
-                  It's a delivery service, we have finally accomplished things that
-                  I have been waiting to get done. I would recommend this service
-                  for anyone trying to get the word out. It has saved me so much
-                  time!
+                  It's a delivery1 service, we have finally accomplished things that I have been waiting to get done. I would recommend this service for anyone trying to get the word out. It has saved me so much time!
                 </p>
                 <img src="images/DOWN.png" alt="Quotation Marks Right" class="quotation-marks-right" />
                 <div class="slider-indicator">
@@ -258,6 +255,15 @@
               </div>
               <img src="images/Vector 5.png" alt="Curve" class="curve-image" />
             </div>
+            
+            <!-- Add the hidden testimonials -->
+            <div id="testimonials" style="display: none;">
+              <div class="testimonial" data-name="Omar Fikri2" data-title="Cosmetics Brand Owner" data-text="It's a delivery2 service, we have finally accomplished things that I have been waiting to get done. I would recommend this service for anyone trying to get the word out. It has saved me so much time!" data-image="images/delivery1.png"></div>
+              <div class="testimonial" data-name="Omar Fikri3" data-title="Cosmetics Brand Owner" data-text="It's a delivery3 service, we have finally accomplished things that I have been waiting to get done. I would recommend this service for anyone trying to get the word out. It has saved me so much time!" data-image="images/delivery1.png"></div>
+              <div class="testimonial" data-name="Omar Fikri4" data-title="Cosmetics Brand Owner" data-text="It's a delivery4 service, we have finally accomplished things that I have been waiting to get done. I would recommend this service for anyone trying to get the word out. It has saved me so much time!" data-image="images/delivery1.png"></div>
+              <div class="testimonial" data-name="Omar Fikri5" data-title="Cosmetics Brand Owner" data-text="It's a delivery5 service, we have finally accomplished things that I have been waiting to get done. I would recommend this service for anyone trying to get the word out. It has saved me so much time!" data-image="images/delivery1.png"></div>
+            </div>
+            
           </div>
         </div>
       </div>
@@ -372,16 +378,96 @@
             Offrez-vous une expérience utilisateur Flexible et optimale.
           </h2>
 
-          <p class="section-subtitle">
-            Découvrez notre plateforme web dédiée à la livraison pour
-            l'E-commerce, assurant un suivi en temps réel et sécurisé de vos
-            produits grâce à nos Connecteurs & API.
+    <section class="contact-section">
+      <div class="blue-part">
+        <div class="container">
+          <h2 class="section-title text-center" style="color: yellow;">Contactez Nous</h2>
+          <p class="section-subtitle text-center" style="width: 40%;">
+            Que ce soit pour le suivi de vos envois, vos demandes d'enlèvement
+            ou le service après-vente, une équipe dédiée est à votre écoute.
           </p>
-          <a href="#" class="btn btn-primary">Livrer maintenant <span class="arrow-icon">></span></a>
+          <div class="border-dotted-around-gp"></div>
+          <div class="row contact-info">
+            <div class="col-md-4 text-center">
+              <img src="images/TELEPHONE.png" alt="Téléphones" />
+              <p class="contact-info-title">Téléphones</p>
+              <p>0663057202<br />0700124078</p>
+            </div>
+            <div class="col-md-4 text-center">
+              <img src="images/ADRESSE.png" alt="Adresse" />
+              <p class="contact-info-title">Adresse</p>
+              <p>Hay Agdal Lot tissir<br />bernoussi Casablanca</p>
+            </div>
+            <div class="col-md-4 text-center">
+              <img src="images/HORAIRE.png" alt="Heures de travail" />
+              <p class="contact-info-title">Heures de travail</p>
+              <p>Lundi à Samedi<br />Depuis 9:00 à 19:00</p>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+      <div class="green-part">
+        <div class="container">
+          <div class="row" height="70vh">
+            <div class="col-md-8 custom-border-left" height="100%" >
+              <form action="submit-form.php" method="post" class="contact-form">
+                <div class="form-group">
+                  <label for="nom">Nom</label>
+                  <input type="text" id="nom" name="nom" class="form-control" />
+                </div>
+                <div class="form-group">
+                  <label for="prenom">Prénom</label>
+                  <input
+                    type="text"
+                    id="prenom"
+                    name="prenom"
+                    class="form-control"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    class="form-control"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="sujet">Sujet</label>
+                  <input
+                    type="text"
+                    id="sujet"
+                    name="sujet"
+                    class="form-control"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="message">Message</label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    class="form-control"
+                  ></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Envoyer</button>
+              </form>
+            </div>
+            <div class="col-md-4 custom-border-right" >
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3325.2392072583074!2d-7.524722!3d33.591609!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda7d31e2345b37d%3A0x490f4aedeede33a4!2sSidi%20Bernoussi%2C%20Casablanca!5e0!3m2!1sen!2sma!4v1620145063028!5m2!1sen!2sma"
+                width="100%"
+                height="100%"
+                style="border: 0;border-radius: 0 20px 20px 0;"
+                allowfullscreen=""
+                loading="lazy"
+                
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
   <section class="desk-image">
     <img src="images/desktop.png" alt="Desk with Laptop" />
@@ -758,128 +844,6 @@
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <!-- Bootstrap JS -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <!-- Custom JS -->
-  <script>
-    const testimonials = [{
-        name: "Omar Fikri1",
-        title: "Cosmetics Brand Owner",
-        text: "It's a delivery1 service, we have finally accomplished things that I have been waiting to get done. I would recommend this service for anyone trying to get the word out. It has saved me so much time!",
-        image: "images/delivery1.png"
-      },
-      {
-        name: "Omar Fikri2",
-        title: "Cosmetics Brand Owner",
-        text: "It's a delivery2 service, we have finally accomplished things that I have been waiting to get done. I would recommend this service for anyone trying to get the word out. It has saved me so much time!",
-        image: "images/delivery1.png"
-      },
-      {
-        name: "Omar Fikri3",
-        title: "Cosmetics Brand Owner",
-        text: "It's a delivery3 service, we have finally accomplished things that I have been waiting to get done. I would recommend this service for anyone trying to get the word out. It has saved me so much time!",
-        image: "images/delivery1.png"
-      },
-      {
-        name: "Omar Fikri4",
-        title: "Cosmetics Brand Owner",
-        text: "It's a delivery4 service, we have finally accomplished things that I have been waiting to get done. I would recommend this service for anyone trying to get the word out. It has saved me so much time!",
-        image: "images/delivery1.png"
-      },
-      {
-        name: "Omar Fikri5",
-        title: "Cosmetics Brand Owner",
-        text: "It's a delivery5 service, we have finally accomplished things that I have been waiting to get done. I would recommend this service for anyone trying to get the word out. It has saved me so much time!",
-        image: "images/delivery1.png"
-      },
-
-    ];
-
-    function showTestimonial(index) {
-      const authorName = document.querySelector('[data-author-name]');
-      const authorTitle = document.querySelector('[data-author-title]');
-      const testimonialText = document.querySelector('[data-testimonial-text]');
-      const authorImage = document.querySelector('.author-image');
-
-      authorName.textContent = testimonials[index].name;
-      authorTitle.textContent = testimonials[index].title;
-      testimonialText.textContent = testimonials[index].text;
-      authorImage.src = testimonials[index].image;
-
-      // Mettre à jour les points d'indicateur
-      const dots = document.querySelectorAll('.dot');
-      dots.forEach(dot => dot.classList.remove('active'));
-      dots[index].classList.add('active');
-    }
-
-    // Initialiser avec le premier témoignage
-    showTestimonial(0);
-
-    // cursor
-    document.addEventListener('DOMContentLoaded', () => {
-      let currentIndex = 2; // Index of the initially active item
-      const items = document.querySelectorAll('.menu-item');
-      const itemCount = items.length;
-
-      function updateOpacity() {
-        items.forEach((item, index) => {
-          item.classList.remove('active');
-          item.style.opacity = '0.5';
-          item.style.transition = 'opacity 0.3s';
-        });
-
-        items[currentIndex].classList.add('active');
-        items[currentIndex].style.opacity = '1';
-
-        const leftIndex1 = (currentIndex - 1 + itemCount) % itemCount;
-        const rightIndex1 = (currentIndex + 1) % itemCount;
-        items[leftIndex1].style.opacity = '0.5';
-        items[rightIndex1].style.opacity = '0.5';
-
-        const leftIndex2 = (currentIndex - 2 + itemCount) % itemCount;
-        const rightIndex2 = (currentIndex + 2) % itemCount;
-        items[leftIndex2].style.opacity = '0.3';
-        items[rightIndex2].style.opacity = '0.3';
-    }
-
-      function nextItem() {
-        currentIndex = (currentIndex + 1) % itemCount;
-        updateSlider();
-    }
-
-    function prevItem() {
-        currentIndex = (currentIndex - 1 + itemCount) % itemCount;
-        updateSlider();
-    }
-
-      // Click event
-      items.forEach((item, index) => {
-        item.addEventListener('click', () => {
-            currentIndex = index;
-            updateSlider();
-        });
-      });
-
-      // Keyboard navigation
-      document.addEventListener('keydown', (e) => {
-        if (e.key === 'ArrowRight') {
-            clearInterval(autoMoveInterval); // Stop auto movement
-            nextItem();
-            startAutoMove(); // Restart auto movement
-        } else if (e.key === 'ArrowLeft') {
-            clearInterval(autoMoveInterval); // Stop auto movement
-            prevItem();
-            startAutoMove(); // Restart auto movement
-        }
-      });
-
-      // Initial opacity setup
-      updateOpacity();
-    });
-
-
-
-    // cursor
-  </script>
-
-</body>
-
+  <!-- Custom JS -->    
+  </body>
 </html>
