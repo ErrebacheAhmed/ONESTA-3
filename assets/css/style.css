@@ -995,7 +995,7 @@ body {
 
 .second-section .flag-background {
   background: url('../../images/drapaux.png') no-repeat center center;
-  background-size: cover;
+  background-size: inherit;
   position: absolute;
   top: 0;
   left: 0;
