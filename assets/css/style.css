@@ -396,8 +396,13 @@ img {
   padding: 200px 0;
   background: linear-gradient(360deg, #C7F0FD 0%, rgba(255, 255, 255, 0) 100%);
   position: relative;
+  z-index: 1; /* Ensure this section is above other elements */ /* Ensure this section is above other elements */
+}
+.client-success-section {
+  position: relative; /* Ensure this section is relative for absolute positioning inside */
   z-index: 1; /* Ensure this section is above other elements */
-  
+  padding: 200px 0;
+  background: linear-gradient(360deg, #C7F0FD 0%, rgba(255, 255, 255, 0) 100%);
 }
 
 .client-success-title {
@@ -419,24 +424,22 @@ img {
 }
 
 .testimonial-box {
-  background-color: #1419B5;
+  background-color: #1419b5;
   color: white;
   border-radius: 15px;
   padding: 60px;
   text-align: center;
-  position: relative;
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 40px;
-  width: 80%;
+  width: 90%;
   left: 50%;
   transform: translateX(-50%);
-  position:absolute ; /* Ensure absolute positioning */
-  top: 50%; /* Adjust position to be half inside, half outside */
+  position: absolute;
+  top: 50%;
+  z-index: 0;
 }
-
 .testimonial-content {
   width: 100%;
   position: relative;
@@ -448,11 +451,11 @@ img {
 }
 
 .curve-image {
-  position: relative;
+  position: absolute;
   width: 100%;
-  top: 55px;
+  top: 45px;
   left: 0;
-  z-index: 1;
+  z-index: 0;
   height: auto;
 }
 
@@ -519,14 +522,15 @@ img {
   margin: 35px;
   z-index: 1;
 }
-
 .slider-indicator {
   position: absolute;
-  bottom: 10px;
-  width: 100%;
+  bottom: -20px; /* Adjust as needed to position above the curve image */
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
   justify-content: center;
-  z-index: 1; /* Assurez-vous que les indicateurs sont au-dessus de la courbe */
+  width: 100%;
+  z-index: 2; /* Ensure indicators are above the curve image */
 }
 
 .dot {
