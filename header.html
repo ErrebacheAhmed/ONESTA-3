@@ -357,7 +357,7 @@
             <img src="images/Vector 5.png" alt="Curve" class="curve-image" />
             <div class="testimonial-box">
               <img src="images/up.png" alt="Quotation Marks Left" class="quotation-marks-left" />
-              <div class="swiper-container">
+              <div class="swiper-container testimonial-slider">
                 <div class="swiper-wrapper">
                   <!-- Slide 1 -->
                   <div class="swiper-slide">
@@ -412,7 +412,7 @@
                   </div>
                 </div>
                 <!-- Add Pagination -->
-                <div class="swiper-pagination"></div>
+                <div class="swiper-pagination testimonial-pagination"></div>
               </div>
               <img src="images/down.png" alt="Quotation Marks Right" class="quotation-marks-right" />
             </div>
@@ -420,45 +420,33 @@
         </div>
       </div>
     </section>
-    
 
-
-    <div class="swiper-container custom-menu-slider">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide custom-slide">
-          <img src="images/Company logo.png" alt="icon"><span>Layers</span>
-        </div>
-        <div class="swiper-slide custom-slide">
-          <img src="images/Company logo.png" alt="icon"><span>Sisyphus</span>
-        </div>
-        <div class="swiper-slide custom-slide">
-          <img src="images/Company logo.png" alt="icon"><span>Circooles</span>
-        </div>
-        <div class="swiper-slide custom-slide active-slide">
-          <img src="images/Company logo.png" alt="icon"><span>Catalog</span>
-        </div>
-        <div class="swiper-slide custom-slide">
-          <img src="images/Company logo.png" alt="icon"><span>Sisyphus</span>
-        </div>
-        <div class="swiper-slide custom-slide">
-          <img src="images/Company logo.png" alt="icon"><span>Quotient</span>
-        </div>
-        <div class="swiper-slide custom-slide">
-          <img src="images/Company logo.png" alt="icon"><span>Layers</span>
+    <section class="section delivery-section">
+      <div class="swiper-container custom-menu-slider">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide custom-slide">
+            <img src="images/Company logo.png" alt="icon"><span>Layers</span>
+          </div>
+          <div class="swiper-slide custom-slide">
+            <img src="images/Company logo.png" alt="icon"><span>Sisyphus</span>
+          </div>
+          <div class="swiper-slide custom-slide">
+            <img src="images/Company logo.png" alt="icon"><span>Circooles</span>
+          </div>
+          <div class="swiper-slide custom-slide active-slide">
+            <img src="images/Company logo.png" alt="icon"><span>Catalog</span>
+          </div>
+          <div class="swiper-slide custom-slide">
+            <img src="images/Company logo.png" alt="icon"><span>Sisyphus</span>
+          </div>
+          <div class="swiper-slide custom-slide">
+            <img src="images/Company logo.png" alt="icon"><span>Quotient</span>
+          </div>
+          <div class="swiper-slide custom-slide">
+            <img src="images/Company logo.png" alt="icon"><span>Layers</span>
+          </div>
         </div>
       </div>
-      <!-- Add Pagination -->
-      <div class="swiper-pagination custom-pagination"></div>
-      <!-- Add Navigation -->
-      <div class="swiper-button-next custom-button-next"></div>
-      <div class="swiper-button-prev custom-button-prev"></div>
-    </div>
-    
-    
-  
-      
-      
-    <section class="section delivery-section">
       <div class="container">
         <div class="row align-items-center">
           <div class="col-lg-6">
@@ -792,48 +780,48 @@
     <!-- Custom JS -->
    
     <script>
-      var swiper = new Swiper('.swiper-container', {
-        loop: true,
-        pagination: {
-          el: '.swiper-pagination',
-          clickable: true,
-        },
-      });
-    </script>
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    var customSwiper = new Swiper('.swiper-container.custom-menu-slider', {
-      slidesPerView: 5,
-      spaceBetween: 30,
-      pagination: {
-        el: '.swiper-pagination.custom-pagination',
-        clickable: true,
-      },
-      navigation: {
-        nextEl: '.swiper-button-next.custom-button-next',
-        prevEl: '.swiper-button-prev.custom-button-prev',
-      },
-      breakpoints: {
-        320: {
-          slidesPerView: 1,
-          spaceBetween: 10,
-        },
-        480: {
-          slidesPerView: 2,
-          spaceBetween: 20,
-        },
-        640: {
-          slidesPerView: 3,
-          spaceBetween: 30,
-        },
-        1024: {
+      document.addEventListener('DOMContentLoaded', function () {
+        var testimonialSwiper = new Swiper('.swiper-container.testimonial-slider', {
+          loop: true,
+          pagination: {
+            el: '.testimonial-pagination',
+            clickable: true,
+          },
+        });
+    
+        var customSwiper = new Swiper('.swiper-container.custom-menu-slider', {
           slidesPerView: 5,
           spaceBetween: 30,
-        },
-      },
-    });
-  });
-</script>
+          pagination: {
+            el: '.swiper-pagination.custom-pagination',
+            clickable: true,
+          },
+          navigation: {
+            nextEl: '.swiper-button-next.custom-button-next',
+            prevEl: '.swiper-button-prev.custom-button-prev',
+          },
+          breakpoints: {
+            320: {
+              slidesPerView: 1,
+              spaceBetween: 10,
+            },
+            480: {
+              slidesPerView: 2,
+              spaceBetween: 20,
+            },
+            640: {
+              slidesPerView: 3,
+              spaceBetween: 30,
+            },
+            1024: {
+              slidesPerView: 5,
+              spaceBetween: 30,
+            },
+          },
+        });
+      });
+    </script>
+   
 
     
   </body>

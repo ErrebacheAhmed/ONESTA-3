@@ -413,7 +413,7 @@ img {
   z-index: 1;
 }
 
-.client-success-title {
+.client-success-section .client-success-title {
   font-family: 'Poppins', sans-serif;
   font-size: 38px;
   font-weight: 800;
@@ -422,7 +422,7 @@ img {
   color: #0500FF;
 }
 
-.client-success-description {
+.client-success-section .client-success-description {
   font-family: 'Poppins', sans-serif;
   font-size: 18px;
   font-weight: 300;
@@ -431,17 +431,18 @@ img {
   color: #182450;
 }
 
-.swiper-container {
+.client-success-section .swiper-container {
   width: 100%;
   height: 100%;
 }
 
-.swiper-slide {
+.client-success-section .swiper-slide {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.testmondialrow{
+
+.client-success-section .testmondialrow {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -451,7 +452,8 @@ img {
   left: 0;
   right: 0;
 }
-.testimonial-box {
+
+.client-success-section .testimonial-box {
   background-color: #1419b5;
   color: white;
   border-radius: 15px;
@@ -464,7 +466,7 @@ img {
   position: relative;
 }
 
-.testimonial-content {
+.client-success-section .testimonial-content {
   width: 100%;
   position: relative;
   max-width: 740px;
@@ -475,7 +477,7 @@ img {
   height: 100%; /* Prendre toute la hauteur */
 }
 
-.curve-image {
+.client-success-section .curve-image {
   transform: scale(1.1);
   position: absolute;
   width: 100%;
@@ -485,27 +487,29 @@ img {
   height: auto;
 }
 
-.quotation-marks-left,
-.quotation-marks-right {
+.client-success-section .quotation-marks-left,
+.client-success-section .quotation-marks-right {
   position: absolute;
   width: 50px;
   z-index: 1;
 }
 
-.quotation-marks-left {
+.client-success-section .quotation-marks-left {
   left: 125px;
   top: 90px;
 }
 
-.quotation-marks-right {
+.client-success-section .quotation-marks-right {
   right: 170px;
-    bottom: 30px;
-}
-.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal{
-  bottom: var(--swiper-pagination-bottom, 55px )!important;
+  bottom: 30px;
 }
 
-.testimonial-header {
+.client-success-section .swiper-horizontal>.swiper-pagination-bullets,
+.client-success-section .swiper-pagination-bullets.swiper-pagination-horizontal {
+  bottom: var(--swiper-pagination-bottom, 55px) !important;
+}
+
+.client-success-section .testimonial-header {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -513,37 +517,37 @@ img {
   z-index: 1;
 }
 
-.testimonial-author {
+.client-success-section .testimonial-author {
   display: flex;
   align-items: center;
   z-index: 1;
 }
 
-.author-image {
+.client-success-section .author-image {
   width: 69px;
   height: 69px;
   border-radius: 50%;
   margin-right: 10px;
 }
 
-.author-info {
+.client-success-section .author-info {
   text-align: left;
 }
 
-.author-info h5 {
+.client-success-section .author-info h5 {
   font-family: var(--font-stack);
   color: white;
   margin: 0;
   font-weight: 600;
 }
 
-.author-info p {
+.client-success-section .author-info p {
   font-family: var(--font-stack);
   font-weight: 300;
   margin: 0;
 }
 
-.testimonial-text {
+.client-success-section .testimonial-text {
   font-family: var(--font-stack);
   font-weight: 300;
   line-height: 1.5;
@@ -553,7 +557,7 @@ img {
   width: 80%;
 }
 
-.swiper-pagination {
+.client-success-section .swiper-pagination {
   position: absolute;
   bottom: 10px;
   left: 0;
@@ -562,24 +566,23 @@ img {
   z-index: 2;
 }
 
-.swiper-pagination .swiper-pagination-bullet {
+.client-success-section .swiper-pagination .swiper-pagination-bullet {
   background-color: #4B7BD1;
   opacity: 1;
   width: 10px;
   height: 10px;
 }
 
-.swiper-pagination .swiper-pagination-bullet-active {
+.client-success-section .swiper-pagination .swiper-pagination-bullet-active {
   background-color: #D9FF00;
   width: 40px;
   border-radius: 5px;
 }
 
-
-
 /* Delivery section */
 .delivery-section {
   background-color: #f9fafb;
+  margin-top: 250px;
 }
 
 .delivery-section .container {
@@ -1016,6 +1019,7 @@ body {
   color:#010cee;
   font-size: 2rem;
   font-weight: bold;
+  margin-top: 130px;
 }
 
 .custom-text {
