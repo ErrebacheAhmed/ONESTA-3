@@ -265,9 +265,9 @@
       />
     </section>
 
+    
     <section class="section client-success-section">
       <div class="container">
-        
         <div class="row align-items-center">
           <div class="col-lg-6">
             <img src="images/img2.png" alt="Client Image" class="img-fluid" />
@@ -323,10 +323,21 @@
               </div>
             </div>
           </div>
-        </div>
+      </div>
+      
+  
           
         </div>
       </section>
+
+    <div class="navigation-menu">
+      <div class="menu-item"><img src="images/Company logo.png" alt="icon"><span>Layers</span></div>
+      <div class="menu-item"><img src="images/Company logo.png" alt="icon"><span>Sisyphus</span></div>
+      <div class="menu-item"><img src="images/Company logo.png" alt="icon"><span>Circooles</span></div>
+      <div class="menu-item active"><img src="images/Company logo.png" alt="icon"><span>Catalog</span></div>
+      <div class="menu-item"><img src="images/Company logo.png" alt="icon"><span>Sisyphus</span></div>
+      
+  </div>
       
       
     <section class="section delivery-section">
@@ -339,7 +350,7 @@
               engagement absolu. Nous vous garantissons rapidité, sécurité et
               une livraison de qualité supérieure.
             </p>
-            <p>
+            <p class="secondParagraph">
               Assurant ainsi l'arrivée en parfait état de vos produits à chaque
               étape du processus.
             </p>
@@ -415,52 +426,50 @@
     </div>
     </section>
 
-    <section>
-
-    <div class="second-section">
+    <section class="second-section">
       <div class="container">
-          <div class="flag-container">
-              <img src="images/Frame 395.png" alt="Drapeau du Maroc">
-          </div>
-          <h2>Expédition partout au Maroc</h2>
-          <div class="col-lg-6">
-            <div class="bg-white p-4 rounded shadow">
-              <table class="table table-bordered mb-0">
-                <thead>
-                  <tr>
-                    <th>Ville</th>
-                    <th>Livré</th>
-                    <th>Retour</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>Abikchka</td>
-                    <td>45.00 Dh</td>
-                    <td>0.00 Dh</td>
-                  </tr>
-                  <!-- Répétez les lignes ci-dessus pour chaque ville -->
-                </tbody>
-              </table>
-              <nav aria-label="Page navigation example" class="mt-3">
-                <ul class="pagination justify-content-center mb-0">
-                  <li class="page-item disabled">
-                    <a class="page-link" href="#" tabindex="-1">Précédent</a>
-                  </li>
-                  <li class="page-item"><a class="page-link" href="#">1</a></li>
-                  <li class="page-item"><a class="page-link" href="#">2</a></li>
-                  <li class="page-item"><a class="page-link" href="#">3</a></li>
-                  <li class="page-item">
-                    <a class="page-link" href="#">Suivant</a>
-                  </li>
-                </ul>
-              </nav>
-            </div>
+          <div class="content-wrapper">
+              <div class="flag-container">
+                  <img src="images/Frame 395.png" alt="Drapeau du Maroc">
+              </div>
+              <div class="text-table-container">
+                  <h2>Expédition partout au Maroc</h2>
+                  <div class="bg-white p-4 rounded shadow table-container">
+                      <table class="table table-bordered mb-0">
+                          <thead>
+                              <tr>
+                                  <th>Ville</th>
+                                  <th>Livré</th>
+                                  <th>Retour</th>
+                              </tr>
+                          </thead>
+                          <tbody>
+                              <tr>
+                                  <td>Abikchka</td>
+                                  <td>45.00 Dh</td>
+                                  <td>0.00 Dh</td>
+                              </tr>
+                              <!-- Répétez les lignes ci-dessus pour chaque ville -->
+                          </tbody>
+                      </table>
+                      <nav aria-label="Page navigation example" class="mt-3">
+                          <ul class="pagination justify-content-center mb-0">
+                              <li class="page-item disabled">
+                                  <a class="page-link" href="#" tabindex="-1">Précédent</a>
+                              </li>
+                              <li class="page-item"><a class="page-link" href="#">1</a></li>
+                              <li class="page-item"><a class="page-link" href="#">2</a></li>
+                              <li class="page-item"><a class="page-link" href="#">3</a></li>
+                              <li class="page-item">
+                                  <a class="page-link" href="#">Suivant</a>
+                              </li>
+                          </ul>
+                      </nav>
+                  </div>
+              </div>
           </div>
       </div>
-  </div>
-
-    </section>
+  </section>
 
     <section class="support-section">
       <div class="container">
@@ -614,7 +623,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <!-- Custom JS -->
     <script>
-      const testimonials = [
+const testimonials = [
         {
           name: "Omar Fikri1",
           title: "Cosmetics Brand Owner",
@@ -667,6 +676,64 @@
     
       // Initialiser avec le premier témoignage
       showTestimonial(0);
+
+      // cursor
+      document.addEventListener('DOMContentLoaded', () => {
+    let currentIndex = 2; // Index of the initially active item
+    const items = document.querySelectorAll('.menu-item');
+    const itemCount = items.length;
+
+    function updateOpacity() {
+        items.forEach((item, index) => {
+            item.classList.remove('active');
+            item.style.opacity = '0.5';
+            item.style.transition = 'opacity 0.3s';
+        });
+
+        items[currentIndex].classList.add('active');
+        items[currentIndex].style.opacity = '1';
+
+        const leftIndex1 = (currentIndex - 1 + itemCount) % itemCount;
+        const rightIndex1 = (currentIndex + 1) % itemCount;
+        items[leftIndex1].style.opacity = '0.8';
+        items[rightIndex1].style.opacity = '0.8';
+
+        const leftIndex2 = (currentIndex - 2 + itemCount) % itemCount;
+        const rightIndex2 = (currentIndex + 2) % itemCount;
+        items[leftIndex2].style.opacity = '0.5';
+        items[rightIndex2].style.opacity = '0.5';
+    }
+
+    function nextItem() {
+        currentIndex = (currentIndex + 1) % itemCount;
+        updateOpacity();
+    }
+
+    // Click event
+    items.forEach((item, index) => {
+        item.addEventListener('click', () => {
+            currentIndex = index;
+            updateOpacity();
+        });
+    });
+
+    // Keyboard navigation
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowRight') {
+            nextItem();
+        } else if (e.key === 'ArrowLeft') {
+            currentIndex = (currentIndex - 1 + itemCount) % itemCount;
+            updateOpacity();
+        }
+    });
+
+    // Initial opacity setup
+    updateOpacity();
+});
+
+
+
+      // cursor
     </script>
     
   </body>
