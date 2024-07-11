@@ -765,7 +765,7 @@ img {
 }
 
 .support-section {
-  padding: 60px 0;
+  padding: 150px 0;
   background: #f7f7f7;
 }
 
@@ -780,16 +780,23 @@ img {
   height: auto;
 }
 
+.bloc-right {
+  padding-left: 60px;
+}
+
 .support-section h2 {
   font-size: 2rem;
   color: #010cee;
   margin-bottom: 1rem;
+  margin-top: 48%;
 }
 
 .support-section p {
   color: #333;
   margin-bottom: 1rem;
   line-height: 1.6;
+  font-size: 1.1rem;
+  margin-top: 1rem;
 }
 
 .support-section .btn {
@@ -982,7 +989,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
   background-color: #f8f9fa;
 }
 
@@ -1013,34 +1019,12 @@ body {
   width: 100%;
   max-width: 500px;
   margin-left: 2rem;
+  z-index: 3;
 }
 
 .custom-image img {
   width: 100%;
-  border: 5px solid #f8f9fa;
   border-radius: 5px;
-}
-
-.custom-image::before {
-  content: '';
-  position: absolute;
-  top: -10px;
-  left: -10px;
-  width: 100%;
-  height: 100%;
-  border: 5px solid #28a745;
-  z-index: -1;
-}
-
-.custom-image::after {
-  content: '';
-  position: absolute;
-  bottom: -20px;
-  left: 0;
-  width: 100%;
-  height: 50%;
-  background-color: #0000ff;
-  z-index: -2;
 }
 
 .second-section {
@@ -1050,10 +1034,17 @@ body {
   text-align: center;
   position: relative;
   min-height: 700px;
+  margin-top: -70px;
 }
 
-.second-section h2 {
-  margin-bottom: 30px;
+.second-section .section-title-white {
+  color: var(--text-white);
+  padding: 62px;
+  font-weight: 800;
+  font-size: 38px;
+  text-align: center;
+  max-width: 75%;
+  margin: auto;
 }
 
 .second-section .flag-background {
@@ -1069,7 +1060,7 @@ body {
 .second-section .text-table-container {
   position: absolute;
   right: 10%;
-  bottom: -35%;
+  bottom: -8%;
   height: 600px;
   z-index: 3;
   min-width: 35%;
@@ -1078,11 +1069,10 @@ body {
 .second-section .table-container {
   background-color: white;
   color: black;
-  border-radius: 10px;
-  padding: 20px;
-  max-width: 700px;
-  margin: 0 auto;
   border-radius: 35px;
+  padding: 20px;
+  margin: 0 auto;
+  max-width: 550px;
 }
 
 .second-section table {
@@ -1124,13 +1114,16 @@ body {
   align-items: center;
 }
 
-
 .table th {
   background-color: #f8f9fa;
   color: #0080FF;
   font-weight: bold;
   border-top: none;
 }
+.table .col-ville {
+  width: 50%;
+}
+
 
 .table th, .table td {
   text-align: left;
@@ -1148,22 +1141,53 @@ body {
   font-weight: 600;
 }
 
+.pagination {
+  display: flex;
+  justify-content: center;
+  padding-left: 0;
+  list-style: none;
+  border-radius: 0.375rem;
+}
+
+.pagination .page-item {
+  display: inline-block;
+}
+
 .pagination .page-link {
   color: #1419B5;
+  background-color: #fff;
+  border: 1px solid #dee2e6;
+  padding: 0.5rem 0.75rem;
+  margin-left: -1px;
+  line-height: 1.25;
+  text-decoration: none;
+  font-size: 1rem; /* Taille uniforme pour les chiffres et les icônes */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pagination .page-item:first-child .page-link {
+  border-top-left-radius: 0.375rem;
+  border-bottom-left-radius: 0.375rem;
+}
+
+.pagination .page-item:last-child .page-link {
+  border-top-right-radius: 0.375rem;
+  border-bottom-right-radius: 0.375rem;
 }
 
 .pagination .page-item.disabled .page-link {
-  color: #cccccc;
+  color: #6c757d;
+  pointer-events: none;
+  cursor: not-allowed;
 }
 
 .pagination .page-item.active .page-link {
-  background-color: #1419B5;
-  border: none;
+  z-index: 1;
   color: #fff;
-}
-
-.pagination .page-link i {
-  font-size: 16px;
+  background-color: #1419B5;
+  border-color: #1419B5;
 }
 
 .input-group-text {
