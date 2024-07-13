@@ -25,6 +25,8 @@
     <link href="assets/css/custom.css" rel="stylesheet" type="text/css" />
     <link href="assets/css/swiper.min.css" rel="stylesheet" type="text/css" />
     <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/responsive.css" rel="stylesheet" type="text/css" />
+
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -40,15 +42,15 @@
   <body data-bs-spy="scroll" data-bs-target="#navbar-example">
 <!-- Section 2: Header and Hero Section -->
 <section class="layout-wrapper landing" id="hero">
-  <div class="hero-bg-overlay"></div>
+  <!-- <div class="hero-bg-overlay"></div> -->
   <!-- Header Section -->
   <nav class="navbar navbar-expand-lg navbar-landing" id="navbar">
     <div class="container">
       <a class="navbar-brand" href="#">
         <img src="images/logo.svg" class="card-logo card-logo-dark" alt="logo dark" height="50" />
       </a>
-      <button class="navbar-toggler py-0 fs-20 text-body" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <i class="mdi mdi-menu"></i>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+        <img src="images/menu-mobile.png" alt="">
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mx-auto mt-2 mt-lg-0" id="navbar-example">
@@ -65,6 +67,52 @@
       </div>
     </div>
   </nav>
+  <div class="mobile-menu-overlay show">
+    <div class="mobile-menu">
+      <div class="mobile-menu-header">
+        <a href="#" class="mobile-menu-brand">
+          <i class="fas fa-home"></i>
+          <img src="images/logo.svg" alt="ONESTA Logo" />
+        </a>
+        <button class="mobile-menu-close"><i class="fas fa-times"></i></button>
+      </div>
+      <ul class="mobile-menu-nav">
+        <li><a href="#accueil">Accueil</a></li>
+        <li><a href="#a-propos">À Propos</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#nos-tarifs">Nos tarifs</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="mobile-menu-contact">
+        <div class="contact-item">
+          <i class="fas fa-phone-alt"></i>
+          <div class="contact-text">
+            <img src="images/TELEPHONE.png" alt="Téléphones" />
+            <span>Téléphones</span>
+            <p>0663057202<br>0700124078</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <i class="fas fa-map-marker-alt"></i>
+          <div class="contact-text">
+            <img src="images/ADRESSE.png" alt="Adresse" />
+            <span>Adresse</span>
+            <p>Hay Agdal Lot tissir<br>bernoussi Casablanca</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <i class="fas fa-clock"></i>
+          <div class="contact-text">
+            <img src="images/HORAIRE.png" alt="Heures de travail" />
+            <span>Heures de travail</span>
+            <p>Lundi à Samedi<br>Depuis 9:00 à 19:00</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
   <!-- Hero Section -->
   <section class="section pb-0 hero-section" id="hero">
     <div class="container">
@@ -588,6 +636,13 @@
         el: '.testimonial-pagination',
         clickable: true,
       },
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+      },
+      fadeEffect: {
+        crossFade: true
+      },
     });
 
     var customSwiper = new Swiper('.swiper-container.custom-menu-slider', {
@@ -596,6 +651,13 @@
       pagination: {
         el: '.swiper-pagination.custom-pagination',
         clickable: true,
+      },
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      fadeEffect: {
+        crossFade: true
       },
       navigation: {
         nextEl: '.swiper-button-next.custom-button-next',
@@ -622,5 +684,24 @@
     });
   });
 </script>
+<script>
+  $(document).ready(function() {
+    // Afficher le menu
+    $('#open-menu-button').click(function() {
+      $('.mobile-menu-overlay').addClass('show');
+    });
+
+    // Cacher le menu
+    $('.mobile-menu-close, .mobile-menu-overlay').click(function() {
+      $('.mobile-menu-overlay').removeClass('show');
+    });
+
+    // Empêcher la propagation du clic sur le menu pour éviter la fermeture
+    $('.mobile-menu').click(function(event) {
+      event.stopPropagation();
+    });
+  });
+</script>
+
 </body>
 </html>
