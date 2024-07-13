@@ -500,7 +500,7 @@ img {
   height: 320px;
   background: url(../../images/around-border.png) no-repeat top center;
   position: absolute;
-  top: -38%;
+  top: -20%;
   background-size: cover;
   z-index: 1;
 }
@@ -525,9 +525,9 @@ img {
   z-index: 2;
 }
 
-.process-section {
+/* .process-section {
   padding: 60px 0;
-}
+} */
 
 .img-precess {
   width: 100%;
@@ -536,7 +536,8 @@ img {
 
 /* client success section  */
 .client-success-section {
-  padding: 200px 0;
+  /* padding: 200px 0; */
+  padding-bottom: 250px;
   background: linear-gradient(360deg, #C7F0FD 0%, rgba(255, 255, 255, 0) 100%);
   position: relative;
   z-index: 1;
@@ -609,10 +610,9 @@ img {
 }
 
 .client-success-section .curve-image {
-  transform: scale(1.1);
   position: absolute;
   width: 100%;
-  top: 55px;
+  top: 15px;
   left: 0;
   z-index: 1;
   height: auto;
@@ -626,7 +626,7 @@ img {
 }
 
 .client-success-section .quotation-marks-left {
-  left: 125px;
+  left: 240px;
   top: 90px;
 }
 
@@ -685,7 +685,7 @@ img {
   font-size: 17.5px;
   margin: 35px;
   z-index: 1;
-  width: 80%;
+  width: 82%;
 }
 
 .client-success-section .swiper-pagination {
