@@ -3,9 +3,6 @@
     .navbar-landing {
       padding: 22px 10px;
     }
-    .mobile-menu-overlay {
-        display: block;
-    }
   
     .btn-auth .nav-link, .btn-auth .btn-outline-white {
       font-size: 14px;
@@ -27,16 +24,22 @@
       font-size: 1.5rem;
     }
   
-    .hero-section .search-container {
+    /* .hero-section .search-container {
       flex-direction: column;
-    }
-  
-    .hero-section .search-box {
-      margin-bottom: 10px;
+    } */
+
+    .hero-section .search-box input {
+      padding-left: 10px;
+      font-size: 12.5px;
     }
   
     .hero-section .btn-yellow {
       padding: 0.5rem 1rem;
+    }
+
+    .hero-section .search-container {
+      width: 80%;
+      margin: auto;
     }
   
     .hero-section p {
