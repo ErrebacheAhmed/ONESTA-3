@@ -67,14 +67,14 @@
       </div>
     </div>
   </nav>
-  <div class="mobile-menu-overlay show">
+  <div class="mobile-menu-overlay">
     <div class="mobile-menu">
       <div class="mobile-menu-header">
         <a href="#" class="mobile-menu-brand">
           <i class="fas fa-home"></i>
           <img src="images/logo.svg" alt="ONESTA Logo" />
         </a>
-        <button class="mobile-menu-close"><i class="fas fa-times"></i></button>
+        <button class="mobile-menu-back"><img src="images/back.svg" alt="" ></button>
       </div>
       <ul class="mobile-menu-nav">
         <li><a href="#accueil">Accueil</a></li>
@@ -689,12 +689,12 @@
 <script>
   $(document).ready(function() {
     // Afficher le menu
-    $('#open-menu-button').click(function() {
+    $('.navbar-toggler').click(function() {
       $('.mobile-menu-overlay').addClass('show');
     });
 
     // Cacher le menu
-    $('.mobile-menu-close, .mobile-menu-overlay').click(function() {
+    $('.mobile-menu-back, .mobile-menu-overlay').click(function() {
       $('.mobile-menu-overlay').removeClass('show');
     });
 

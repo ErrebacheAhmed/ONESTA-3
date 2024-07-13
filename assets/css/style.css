@@ -308,7 +308,6 @@ img {
 .mobile-menu {
   background-color: #1419b5;
   width: 100%;
-  max-width: 400px;
   padding: 30px;
   color: #fff;
 }
@@ -331,9 +330,9 @@ img {
   margin-right: 10px;
 }
 
-.mobile-menu-close {
+.mobile-menu-back {
   position: absolute;
-  right: 20px;
+  left: 0;
   background: none;
   border: none;
   color: #fff;
@@ -392,7 +391,7 @@ img {
 
 /* Show mobile menu when overlay is visible */
 .mobile-menu-overlay.show {
-  display: none;
+  display: block;
 }
 
 
