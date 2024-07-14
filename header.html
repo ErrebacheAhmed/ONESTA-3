@@ -337,40 +337,16 @@
       <div class="swiper-slide custom-slide">
         <img src="images/Company logo.png" alt="icon"><span>Circooles</span>
       </div>
-      <div class="swiper-slide custom-slide active-slide">
-        <img src="images/Company logo.png" alt="icon"><span>Catalog</span>
-      </div>
       <div class="swiper-slide custom-slide">
-        <img src="images/Company logo.png" alt="icon"><span>Sisyphus</span>
+        <img src="images/Company logo.png" alt="icon"><span>Catalog</span>
       </div>
       <div class="swiper-slide custom-slide">
         <img src="images/Company logo.png" alt="icon"><span>Quotient</span>
       </div>
-      <div class="swiper-slide custom-slide">
-        <img src="images/Company logo.png" alt="icon"><span>Layers</span>
-      </div>
-    </div>
-  </div>
-  <div class="container">
-    <div class="row align-items-center">
-      <div class="col-lg-6">
-        <h2>Rapidité, Sécurité et Qualité Garantis!</h2>
-        <p>
-          La qualité de notre logistique et de nos véhicules est notre engagement absolu. Nous vous garantissons rapidité, sécurité et une livraison de qualité supérieure.
-        </p>
-        <p class="secondParagraph">
-          Assurant ainsi l'arrivée en parfait état de vos produits à chaque étape du processus.
-        </p>
-        <a href="#" class="btn btn-primary">
-          Livrer maintenant <span class="arrow-icon">></span>
-        </a>
-      </div>
-      <div class="col-lg-6">
-        <img src="images/car.png" alt="ONESS Delivery Van" class="img-fluid" />
-      </div>
     </div>
   </div>
 </section>
+
 <!-- Section 9: Success Section -->
 <section class="section success-section">
   <div class="container">
@@ -535,8 +511,8 @@
 <section class="contact-section">
   <div class="blue-part">
     <div class="container">
-      <h2 class="section-title text-center" style="color: yellow;">Contactez Nous</h2>
-      <p class="section-subtitle text-center" style="width: 40%;">
+      <h2 class="section-title text-center" >Contactez Nous</h2>
+      <p class="section-subtitle text-center" >
         Que ce soit pour le suivi de vos envois, vos demandes d'enlèvement ou le service après-vente, une équipe dédiée est à votre écoute.
       </p>
       <div class="border-dotted-around-gp"></div>
@@ -591,7 +567,7 @@
           
         </div>
         <div class="col-md-4 custom-border-right">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3325.2392072583074!2d-7.524722!3d33.591609!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda7d31e2345b37d%3A0x490f4aedeede33a4!2sSidi%20Bernoussi%2C%20Casablanca!5e0!3m2!1sen!2sma!4v1620145063028!5m2!1sen!2sma" width="100%" height="100%" style="border: 0; border-radius: 0 20px 20px 0;" allowfullscreen="" loading="lazy"></iframe>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3325.2392072583074!2d-7.524722!3d33.591609!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda7d31e2345b37d%3A0x490f4aedeede33a4!2sSidi%20Bernoussi%2C%20Casablanca!5e0!3m2!1sen!2sma!4v1620145063028!5m2!1sen!2sma"   allowfullscreen="" loading="lazy" ></iframe>
         </div>
       </div>
     </div>
@@ -626,6 +602,44 @@
     </div>
   </div>
 </footer>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+  const swiper = new Swiper('.custom-menu-slider', {
+    slidesPerView: 5,
+    spaceBetween: 30,
+    centeredSlides: true,
+    loop: false,
+    autoplay: false,
+    // allowTouchMove: false,
+    on: {
+      init: function () {
+        updateOpacity();
+      }
+    }
+  });
+
+  function updateOpacity() {
+    const slides = document.querySelectorAll('.custom-slide');
+    const middleIndex = Math.floor(slides.length / 2);
+
+    slides.forEach((slide, index) => {
+      slide.style.opacity = '0.3';
+      slide.classList.remove('active', 'next', 'prev');
+      if (index === middleIndex) {
+        slide.style.opacity = '1';
+        slide.classList.add('active');
+      } else if (index === middleIndex - 1 || index === middleIndex + 1) {
+        slide.style.opacity = '0.5';
+        slide.classList.add(index === middleIndex - 1 ? 'prev' : 'next');
+      }
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    updateOpacity();
+  });
+</script>
+
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <!-- Bootstrap JS -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
