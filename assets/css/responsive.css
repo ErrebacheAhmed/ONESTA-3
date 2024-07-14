@@ -21,8 +21,14 @@
         padding-top: 50px;
     }
     .hero-section h1 {
+      margin: auto;
+      width: 70%;
       font-size: 1.5rem;
     }
+    .hero-section .stars {
+     display: block;
+    }
+  
   
     /* .hero-section .search-container {
       flex-direction: column;
