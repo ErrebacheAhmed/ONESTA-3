@@ -315,11 +315,27 @@
     font-size: 1rem;
   }
 
+  .entrepot .custom-image {
+    display: flex;
+    justify-content: center;
+    position: relative;
+  }
+
   .entrepot .custom-image img {
     width: 80%;
     height: auto;
   }
+
+  .entrepot .custom-image-rectongle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: auto;
+  }
 }
+
 @media (max-width: 768px) {
   .second-section .content-wrapper {
     text-align: center;
