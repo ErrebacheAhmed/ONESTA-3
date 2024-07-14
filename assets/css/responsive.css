@@ -129,10 +129,19 @@
 
     .client-success-section .client-success-description{
       text-align: center;
+      font-size: 15px;
     }
   /* Delivery Section */
   .delivery-section .container {
     flex-direction: column;
+  }
+
+  .delivery-desktop {
+    display: none;
+  }
+  
+  .delivery-mobile {
+    display: block;
   }
 
   .delivery-section h2 {
@@ -148,8 +157,15 @@
   }
 
   /* Success Section */
+  .success-section {
+    padding-top: 30px;
+  }
   .success-section h2 {
-    font-size: 1.2rem;
+    font-size: 2rem;
+  }
+
+  .success-section .mr-top {
+    margin-top: 40px;
   }
 
   .success-section h3 {
@@ -157,7 +173,12 @@
   }
 
   .success-section p {
-    font-size: 14px;
+    font-size: 15px;
+  }
+
+  .success-section  .success-features {
+    text-align: left;
+    margin-top: 35px;
   }
 
   .success-section .btn-primary {
@@ -182,33 +203,56 @@
     padding: 30px 0;
   }
 
-  .img-precess {
+  .process-section .img-precess {
     width: 100%;
   }
 
   /* Client Success Section */
   .client-success-section {
-    padding: 100px 0;
+    padding: 30px 20px 220px 20px;
   }
 
-  .client-success-title {
+  .client-success-section .client-success-title {
     font-size: 1.5rem;
   }
 
-  .client-success-description {
+  .client-success-section .client-success-description {
     font-size: 14px;
   }
 
-  .testimonial-box {
+  .client-success-section .testimonial-box {
     padding: 30px;
   }
 
-  .testimonial-text {
-    font-size: 14px;
+  .client-success-section .testimonial-text {
+    font-size: 15px;
     margin: 20px;
   }
-  .client-success-section .testmondialrow {
+  .client-success-section .client-success-section .testmondialrow {
     position: relative;
+    width: 100%;
+  }
+
+  .client-success-section .quotation-marks-left,.client-success-section .quotation-marks-right {
+    display: none;
+  }
+
+  .client-success-section .testimonial-box {
+    padding: 20px 0;
+    background-image: url(../../images/Vector\ 5.png);
+    background-repeat: no-repeat;
+    background-size: initial;
+    background-position-y: center;
+    background-position-x: center;
+  }
+
+  .client-success-section .testmondialrow .curve-image {
+    display: none;
+  }
+
+  .client-success-section .swiper-horizontal>.swiper-pagination-bullets,
+  .client-success-section .swiper-pagination-bullets.swiper-pagination-horizontal {
+   bottom: var(--swiper-pagination-bottom, 20px) !important;
   }
 
   /* Contact Section */

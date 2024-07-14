@@ -742,6 +742,14 @@ img {
   margin-top: 130px;
 }
 
+.delivery-desktop {
+  display: block;
+}
+
+.delivery-mobile {
+  display: none;
+}
+
 .delivery-section .container {
   margin-top: 75px;
   display: flex;
@@ -837,17 +845,18 @@ img {
   align-items: center;
 }
 
-.success-section h2 {
+.success-section .title-top {
   font-size: 1.5rem;
   font-weight: 600;
-  color: #010cee;
+  color:#182450;
 }
 
-.success-section h3 {
+.success-section .section-title {
   font-size: 2rem;
   font-weight: 700;
   color: #010cee;
   margin-bottom: 1rem;
+  margin-top: 0;
 }
 
 .success-section p {
