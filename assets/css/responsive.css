@@ -207,6 +207,9 @@
     font-size: 14px;
     margin: 20px;
   }
+  .client-success-section .testmondialrow {
+    position: relative;
+  }
 
   /* Contact Section */
   .contact-section .blue-part {
