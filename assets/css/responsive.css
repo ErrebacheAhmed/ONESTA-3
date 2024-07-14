@@ -1,262 +1,261 @@
 @media (max-width: 768px) {
-    /* Navbar */
-    .navbar-landing {
-      padding: 22px 10px;
-    }
-  
-    .btn-auth .nav-link, .btn-auth .btn-outline-white {
-      font-size: 14px;
-    }
-  
-    .btn-auth {
-      flex-direction: column;
-    }
-  
-    .navbar-collapse {
-      text-align: center;
-    }
-  
-    /* Hero Section */
-    .hero-section {
-        padding-top: 50px;
-    }
-    .hero-section h1 {
-      margin: auto;
-      width: 70%;
-      font-size: 1.5rem;
-    }
-    .hero-section .stars {
-     display: block;
-    }
-  
-  
-    /* .hero-section .search-container {
-      flex-direction: column;
-    } */
-
-    .hero-section .search-box input {
-      padding-left: 10px;
-      font-size: 12.5px;
-    }
-  
-    .hero-section .btn-yellow {
-      padding: 0.5rem 1rem;
-    }
-
-    .hero-section .search-container {
-      width: 80%;
-      margin: auto;
-    }
-  
-    .hero-section p {
-      font-size: 16px;
-    }
-  
-    .bg-yellow {
-      height: 150px;
-    }
-  
-    /* Features Section */
-    .features-section {
-      padding: 30px 0;
-    }
-  
-    .feature-box {
-      margin: 10px 0;
-      padding: 10px;
-    }
-  
-    .feature-title {
-      font-size: 18px;
-    }
-  
-    .feature-description {
-      font-size: 14px;
-      margin-bottom: 30px;
-    }
-  
-    .features-section .col-lg-4:not(:last-child)::after {
-      display: none;
-    }
-  
-    /* User Experience Section */
-    .user-experience-section {
-      padding: 0;
-      margin-bottom: 80px;
-    }
-
-    .user-experience-section .section-subtitle {
-      width: 100%;
-    }
-
-    .user-experience-section .section-title {
-      font-size: 2rem;
-    }
-  
-    .user-experience-section .section-subtitle {
-      font-size: 14px;
-    }
-
-    /* Desk image */
-    .desk-image .border-dotted-around {
-      display: none;
-    }
-
-    .desk-image .bg-desk-yellow {
-      padding: 70px;
-    }
-
-    .desk-image img {
-      max-width: 90%;
-    }
-
-    /* process-section */
-    .process-section .section-title {
-       font-size: 1.8rem;
-    }
-
-    /* .client-success-section */
-    .client-success-section {
-      text-align: center;
-    }
-
-    .client-success-section .client-success-title {
-      font-size: 1.8rem;
-      line-height: 2rem;
-      margin: 20px 0;
-      text-align: center;
-      }
-
-      .client-success-section .client-success-description{
-        text-align: center;
-      }
-    /* Delivery Section */
-    .delivery-section .container {
-      flex-direction: column;
-    }
-  
-    .delivery-section h2 {
-      font-size: 1.5rem;
-    }
-  
-    .delivery-section p {
-      font-size: 14px;
-    }
-  
-    .delivery-section .img-fluid {
-      margin-top: 20px;
-    }
-  
-    /* Success Section */
-    .success-section h2 {
-      font-size: 1.2rem;
-    }
-  
-    .success-section h3 {
-      font-size: 1.5rem;
-    }
-  
-    .success-section p {
-      font-size: 14px;
-    }
-  
-    .success-section .btn-primary {
-      font-size: 14px;
-    }
-  
-    /* Warehouse Section */
-    .warehouse-section h2 {
-      font-size: 1.2rem;
-    }
-  
-    .warehouse-section p {
-      font-size: 14px;
-    }
-  
-    .warehouse-section .btn-primary {
-      font-size: 14px;
-    }
-  
-    /* Process Section */
-    .process-section {
-      padding: 30px 0;
-    }
-  
-    .img-precess {
-      width: 100%;
-    }
-  
-    /* Client Success Section */
-    .client-success-section {
-      padding: 100px 0;
-    }
-  
-    .client-success-title {
-      font-size: 1.5rem;
-    }
-  
-    .client-success-description {
-      font-size: 14px;
-    }
-  
-    .testimonial-box {
-      padding: 30px;
-    }
-  
-    .testimonial-text {
-      font-size: 14px;
-      margin: 20px;
-    }
-  
-    /* Contact Section */
-    .contact-section .blue-part {
-      padding: 30px 0;
-    }
-  
-    .contact-section .section-title {
-      font-size: 1.5rem;
-    }
-  
-    .contact-section .section-subtitle {
-      font-size: 14px;
-    }
-  
-    .contact-info img {
-      height: 30px;
-    }
-  
-    .contact-info .contact-info-title {
-      font-size: 14px;
-    }
-  
-    .contact-info p {
-      font-size: 14px;
-    }
-  
-    .green-part {
-      padding: 30px 0;
-    }
-  
-    .contact-form .form-group {
-      margin-bottom: 10px;
-    }
-  
-    .contact-form .form-control {
-      padding: 5px;
-    }
-  
-    .contact-form .btn-primary {
-      font-size: 14px;
-      padding: 5px 10px;
-    }
-  
-    /* Swiper */
-    .swiper-container {
-      width: 100%;
-    }
-  
-    .swiper-slide {
-      width: auto;
-    }
+  /* Navbar */
+  .navbar-landing {
+    padding: 22px 10px;
   }
-  
+
+  .btn-auth .nav-link, .btn-auth .btn-outline-white {
+    font-size: 14px;
+  }
+
+  .btn-auth {
+    flex-direction: column;
+  }
+
+  .navbar-collapse {
+    text-align: center;
+  }
+
+  /* Hero Section */
+  .hero-section {
+      padding-top: 50px;
+  }
+  .hero-section h1 {
+    margin: auto;
+    width: 70%;
+    font-size: 1.5rem;
+  }
+  .hero-section .stars {
+   display: block;
+  }
+
+
+  /* .hero-section .search-container {
+    flex-direction: column;
+  } */
+
+  .hero-section .search-box input {
+    padding-left: 10px;
+    font-size: 12.5px;
+  }
+
+  .hero-section .btn-yellow {
+    padding: 0.5rem 1rem;
+  }
+
+  .hero-section .search-container {
+    width: 80%;
+    margin: auto;
+  }
+
+  .hero-section p {
+    font-size: 16px;
+  }
+
+  .bg-yellow {
+    height: 150px;
+  }
+
+  /* Features Section */
+  .features-section {
+    padding: 30px 0;
+  }
+
+  .feature-box {
+    margin: 10px 0;
+    padding: 10px;
+  }
+
+  .feature-title {
+    font-size: 18px;
+  }
+
+  .feature-description {
+    font-size: 14px;
+    margin-bottom: 30px;
+  }
+
+  .features-section .col-lg-4:not(:last-child)::after {
+    display: none;
+  }
+
+  /* User Experience Section */
+  .user-experience-section {
+    padding: 0;
+    margin-bottom: 80px;
+  }
+
+  .user-experience-section .section-subtitle {
+    width: 100%;
+  }
+
+  .user-experience-section .section-title {
+    font-size: 2rem;
+  }
+
+  .user-experience-section .section-subtitle {
+    font-size: 14px;
+  }
+
+  /* Desk image */
+  .desk-image .border-dotted-around {
+    display: none;
+  }
+
+  .desk-image .bg-desk-yellow {
+    padding: 70px;
+  }
+
+  .desk-image img {
+    max-width: 90%;
+  }
+
+  /* process-section */
+  .process-section .section-title {
+     font-size: 1.8rem;
+  }
+
+  /* .client-success-section */
+  .client-success-section {
+    text-align: center;
+  }
+
+  .client-success-section .client-success-title {
+    font-size: 1.8rem;
+    line-height: 2rem;
+    margin: 20px 0;
+    text-align: center;
+    }
+
+    .client-success-section .client-success-description{
+      text-align: center;
+    }
+  /* Delivery Section */
+  .delivery-section .container {
+    flex-direction: column;
+  }
+
+  .delivery-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .delivery-section p {
+    font-size: 14px;
+  }
+
+  .delivery-section .img-fluid {
+    margin-top: 20px;
+  }
+
+  /* Success Section */
+  .success-section h2 {
+    font-size: 1.2rem;
+  }
+
+  .success-section h3 {
+    font-size: 1.5rem;
+  }
+
+  .success-section p {
+    font-size: 14px;
+  }
+
+  .success-section .btn-primary {
+    font-size: 14px;
+  }
+
+  /* Warehouse Section */
+  .warehouse-section h2 {
+    font-size: 1.2rem;
+  }
+
+  .warehouse-section p {
+    font-size: 14px;
+  }
+
+  .warehouse-section .btn-primary {
+    font-size: 14px;
+  }
+
+  /* Process Section */
+  .process-section {
+    padding: 30px 0;
+  }
+
+  .img-precess {
+    width: 100%;
+  }
+
+  /* Client Success Section */
+  .client-success-section {
+    padding: 100px 0;
+  }
+
+  .client-success-title {
+    font-size: 1.5rem;
+  }
+
+  .client-success-description {
+    font-size: 14px;
+  }
+
+  .testimonial-box {
+    padding: 30px;
+  }
+
+  .testimonial-text {
+    font-size: 14px;
+    margin: 20px;
+  }
+
+  /* Contact Section */
+  .contact-section .blue-part {
+    padding: 30px 0;
+  }
+
+  .contact-section .section-title {
+    font-size: 1.5rem;
+  }
+
+  .contact-section .section-subtitle {
+    font-size: 14px;
+  }
+
+  .contact-info img {
+    height: 30px;
+  }
+
+  .contact-info .contact-info-title {
+    font-size: 14px;
+  }
+
+  .contact-info p {
+    font-size: 14px;
+  }
+
+  .green-part {
+    padding: 30px 0;
+  }
+
+  .contact-form .form-group {
+    margin-bottom: 10px;
+  }
+
+  .contact-form .form-control {
+    padding: 5px;
+  }
+
+  .contact-form .btn-primary {
+    font-size: 14px;
+    padding: 5px 10px;
+  }
+
+  /* Swiper */
+  .swiper-container {
+    width: 100%;
+  }
+
+  .swiper-slide {
+    width: auto;
+  }
+}
