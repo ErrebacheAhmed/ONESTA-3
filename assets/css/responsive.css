@@ -80,14 +80,56 @@
     }
   
     /* User Experience Section */
+    .user-experience-section {
+      padding: 0;
+      margin-bottom: 80px;
+    }
+
+    .user-experience-section .section-subtitle {
+      width: 100%;
+    }
+
     .user-experience-section .section-title {
-      font-size: 1.5rem;
+      font-size: 2rem;
     }
   
     .user-experience-section .section-subtitle {
       font-size: 14px;
     }
-  
+
+    /* Desk image */
+    .desk-image .border-dotted-around {
+      display: none;
+    }
+
+    .desk-image .bg-desk-yellow {
+      padding: 70px;
+    }
+
+    .desk-image img {
+      max-width: 90%;
+    }
+
+    /* process-section */
+    .process-section .section-title {
+       font-size: 1.8rem;
+    }
+
+    /* .client-success-section */
+    .client-success-section {
+      text-align: center;
+    }
+
+    .client-success-section .client-success-title {
+      font-size: 1.8rem;
+      line-height: 2rem;
+      margin: 20px 0;
+      text-align: center;
+      }
+
+      .client-success-section .client-success-description{
+        text-align: center;
+      }
     /* Delivery Section */
     .delivery-section .container {
       flex-direction: column;

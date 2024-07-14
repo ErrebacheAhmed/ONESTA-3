@@ -343,6 +343,12 @@
       <div class="swiper-slide custom-slide">
         <img src="images/Company logo.png" alt="icon"><span>Quotient</span>
       </div>
+      <div class="swiper-slide custom-slide">
+        <img src="images/Company logo.png" alt="icon"><span>Catalog</span>
+      </div>
+      <div class="swiper-slide custom-slide">
+        <img src="images/Company logo.png" alt="icon"><span>Quotient</span>
+      </div>
     </div>
   </div>
 </section>
@@ -602,51 +608,16 @@
     </div>
   </div>
 </footer>
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-<script>
-  const swiper = new Swiper('.custom-menu-slider', {
-    slidesPerView: 5,
-    spaceBetween: 30,
-    centeredSlides: true,
-    loop: false,
-    autoplay: false,
-    // allowTouchMove: false,
-    on: {
-      init: function () {
-        updateOpacity();
-      }
-    }
-  });
-
-  function updateOpacity() {
-    const slides = document.querySelectorAll('.custom-slide');
-    const middleIndex = Math.floor(slides.length / 2);
-
-    slides.forEach((slide, index) => {
-      slide.style.opacity = '0.3';
-      slide.classList.remove('active', 'next', 'prev');
-      if (index === middleIndex) {
-        slide.style.opacity = '1';
-        slide.classList.add('active');
-      } else if (index === middleIndex - 1 || index === middleIndex + 1) {
-        slide.style.opacity = '0.5';
-        slide.classList.add(index === middleIndex - 1 ? 'prev' : 'next');
-      }
-    });
-  }
-
-  document.addEventListener('DOMContentLoaded', function () {
-    updateOpacity();
-  });
-</script>
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
 <!-- Bootstrap JS -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <!-- Custom JS -->
 <script>
   document.addEventListener('DOMContentLoaded', function () {
-    var testimonialSwiper = new Swiper('.swiper-container.testimonial-slider', {
+    var testimonialSwiper = new Swiper('.testimonial-slider', {
       loop: true,
       pagination: {
         el: '.testimonial-pagination',
@@ -661,7 +632,8 @@
       },
     });
 
-    var customSwiper = new Swiper('.swiper-container.custom-menu-slider', {
+    var customSwiper = new Swiper('.custom-menu-slider', {
+      loop: true,
       slidesPerView: 5,
       spaceBetween: 30,
       pagination: {
@@ -697,19 +669,50 @@
           spaceBetween: 30,
         },
       },
+      allowSlidePrev: false,
+      on: {
+        slideChange: function () {
+          updateSlideOpacity();
+        },
+        init: function () {
+          updateSlideOpacity();
+        },
+      }
     });
   });
+  function updateSlideOpacity() {
+    const slides = document.querySelectorAll('.custom-slide');
+    const middleIndex = Math.floor(slides.length / 2);
+
+    slides.forEach((slide, index) => {
+      slide.style.opacity = '0.3';
+      slide.classList.remove('active', 'next', 'prev');
+      if (index === middleIndex) {
+        slide.style.opacity = '1';
+        slide.classList.add('active');
+      } else if (index === middleIndex - 1 || index === middleIndex + 1) {
+        slide.style.opacity = '0.5';
+        slide.classList.add(index === middleIndex - 1 ? 'prev' : 'next');
+      }
+    });
+  }
+
+  // document.addEventListener('DOMContentLoaded', function () {
+  //   updateSlideOpacity();
+  // });
 </script>
 <script>
   $(document).ready(function() {
     // Afficher le menu
     $('.navbar-toggler').click(function() {
       $('.mobile-menu-overlay').addClass('show');
+      $('.mobile-menu').addClass('show');
     });
 
     // Cacher le menu
     $('.mobile-menu-back, .mobile-menu-overlay').click(function() {
       $('.mobile-menu-overlay').removeClass('show');
+      $('.mobile-menu').removeClass('show');
     });
 
     // Empêcher la propagation du clic sur le menu pour éviter la fermeture
