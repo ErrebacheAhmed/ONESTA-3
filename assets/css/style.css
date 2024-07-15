@@ -1014,7 +1014,7 @@ img {
   justify-content: center;
   flex-direction: column;
 }
-.contact-section .row-mobile{
+.contact-section .mobile{
   display: none;
 }
 

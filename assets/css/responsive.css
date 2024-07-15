@@ -283,7 +283,8 @@
 
   /* Contact Section */
   .contact-section .blue-part {
-    padding: 30px 0;
+    padding: 93% 0;
+    padding-top: 25px !important;
   }
 
   .contact-section .section-title {
@@ -295,7 +296,21 @@
     width: 65%;
 
   }
-
+  .contact-section .custom-border-left{
+    display: none;
+  }
+  .contact-section .mobile{
+    display: flex;
+  }
+  .contact-section .custom-border-right{
+    top: 10rem;
+    display: contents;
+  }
+  .contact-section iframe {
+    border-radius: 20px 20px 0 0;
+    margin-bottom: 20px;
+    height: 10rem;
+}
   .contact-info img {
     height: 30px;
   }
@@ -312,6 +327,13 @@
   .green-part {
     padding: 30px 0;
   }
+  .green-part .row {
+    top: 45%;
+  }
+  .contact-form{
+    border-radius: 0 0 15px 15px;
+    padding: 5% 5% 5%;
+  }
 
   .contact-form .form-group {
     margin-bottom: 10px;
@@ -324,7 +346,9 @@
   .contact-form .btn-primary {
     font-size: 14px;
     padding: 5px 10px;
+    margin: 15px auto;
   }
+  
 
   /* Swiper */
   .swiper-container {
