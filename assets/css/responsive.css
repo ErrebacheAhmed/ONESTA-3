@@ -151,18 +151,31 @@
   
   .delivery-mobile {
     display: block;
+  }.delivery-section .delivery-mobile .col-lg-6 {
+    display: contents;
   }
 
   .delivery-section h2 {
-    font-size: 1.5rem;
+    font-size: 1.9rem;
+        text-align: center;
   }
 
   .delivery-section p {
-    font-size: 14px;
+    margin: auto;
+        font-size: 16px;
+        text-align: center;
   }
-
+  .delivery-section .row{
+    justify-content: center;
+  }
   .delivery-section .img-fluid {
     margin-top: 20px;
+    margin: auto;
+    max-width: 90%;
+  }
+  .delivery-section .btn-primary {
+    margin-top: 5%;
+
   }
 
   /* Success Section */
@@ -279,6 +292,8 @@
 
   .contact-section .section-subtitle {
     font-size: 14px;
+    width: 65%;
+
   }
 
   .contact-info img {
@@ -287,6 +302,7 @@
 
   .contact-info .contact-info-title {
     font-size: 14px;
+    color: var(--secondary-color);
   }
 
   .contact-info p {
@@ -404,7 +420,7 @@
 
 @media (max-width: 768px) {
   .second-section{
-    padding: 50px 25px;
+    padding: 50px 50px;
     min-height: 90rem;
   }
   .second-section .content-wrapper {
@@ -412,7 +428,7 @@
   }
   .second-section .flag-background{
     background: none;
-    top: 45rem;
+    top: 40rem;
   }
   .second-section .img-drapeau{
     display: flex;
@@ -425,11 +441,10 @@
 }
 
   .second-section .custom-text{
-     
-    font-size: 1.2rem;
-      width: 100%;
-      margin-top: 1rem;
-      margin-bottom: 2rem;
+    font-size: 1rem;
+    width: 100%;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
   }
   .second-section .btn-primary{
     border-color: var(--secondary-color);
@@ -437,11 +452,15 @@
     color: var(--primary-color);
   }
   .second-section .section-title-white {
-    font-size: 1.5rem;
-    padding: 20px;
+    font-size: 1.3rem;
+        color: var(--secondary-color);
+        padding: 35px;
   }
   .second-section .custom-heading {
     color: var(--secondary-color);
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 80px;
   }
   .second-section .table td {
     font-size: 13px;
@@ -450,7 +469,7 @@
     position: absolute;
         right: 0%;
         left: 0%;
-        top: 75%;
+        top: 76.5%;
         padding: 15px;
         margin: auto;
         height: 600px;
@@ -483,10 +502,13 @@
   }
   /* support section */
   .support-section img {
-    margin-top: 40%;
+    margin-top: 45%;
 }
 .support-section .custom-heading {
-margin-top: 60px;
+  font-size: 1.5rem;
+  text-align: center;
+  margin-top: 10%;
+  padding: 0px 20%;
 }
 .support-section .bloc-right{
   text-align: center;

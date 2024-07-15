@@ -1014,6 +1014,9 @@ img {
   justify-content: center;
   flex-direction: column;
 }
+.contact-section .row-mobile{
+  display: none;
+}
 
 .contact-section .blue-part .contact-info {
   /* margin-top: 5%; */
