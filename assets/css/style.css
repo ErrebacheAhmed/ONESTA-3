@@ -1525,3 +1525,8 @@ body {
 }
 
 /* cursor */
+.bg-group365{
+  height: 500px;
+  background: url(../../images/Group350.png) center top / contain no-repeat;
+
+}
