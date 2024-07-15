@@ -1,3 +1,12 @@
+/* Root Variables and Body Styles */
+:root {
+  --primary-color: #010cee;
+  --secondary-color: rgba(217, 255, 0, 1);
+  --white-color: #ffffff;
+  --text-white: #fff;
+  --text-black: rgba(24, 36, 80, 1);
+  --font-stack: "Poppins", sans-serif;
+}
 @media (max-width: 768px) {
   /* Navbar */
   .navbar-landing {
@@ -160,6 +169,10 @@
   .success-section {
     padding-top: 30px;
   }
+  .success-section .row {
+    text-align: center;
+    margin-bottom: 30%;
+}
   .success-section h2 {
     font-size: 2rem;
   }
@@ -344,8 +357,10 @@
     text-align: center;
   }
 
+
   .entrepot .custom-content, .entrepot .custom-image {
     width: 100%;
+    display: none;
   }
 
   .entrepot .custom-heading {
@@ -365,7 +380,10 @@
   .entrepot .custom-image {
     display: flex;
     justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
     position: relative;
+    top: -10%;
   }
 
   .entrepot .custom-image img {
@@ -375,29 +393,79 @@
 
   .entrepot .custom-image-rectongle {
     position: absolute;
-    top: 50%;
-    left: 50%;
+    display: flex;
+    top: 91%;
+    margin-left: auto;
+    left: 48%;
     transform: translate(-50%, -50%);
     width: 80%;
-    height: auto;
   }
 }
 
 @media (max-width: 768px) {
+  .second-section{
+    padding: 50px 25px;
+    min-height: 90rem;
+  }
   .second-section .content-wrapper {
     text-align: center;
   }
+  .second-section .flag-background{
+    background: none;
+    top: 45rem;
+  }
+  .second-section .img-drapeau{
+    display: flex;
+    width: 100%;
+  }
+  .second-section .custom-content{
+     display:contents;
+   text-align: center;
 
+}
+
+  .second-section .custom-text{
+     
+    font-size: 1.2rem;
+      width: 100%;
+      margin-top: 1rem;
+      margin-bottom: 2rem;
+  }
+  .second-section .btn-primary{
+    border-color: var(--secondary-color);
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+  }
   .second-section .section-title-white {
     font-size: 1.5rem;
     padding: 20px;
+  }
+  .second-section .custom-heading {
+    color: var(--secondary-color);
+  }
+  .second-section .table td {
+    font-size: 13px;
+  }
+  .second-section .text-table-container {
+    position: absolute;
+        right: 0%;
+        left: 0%;
+        top: 75%;
+        padding: 15px;
+        margin: auto;
+        height: 600px;
+        z-index: 3;
+        min-width: 35%;
   }
 
   .second-section .table-container {
     width: 100%;
     margin: 0 auto;
+   
   }
-
+  .second-section .form-control.search-input {
+    padding: 10px 0;
+  }
   .second-section .input-group.field-search {
     justify-content: center;
   }
@@ -413,4 +481,19 @@
   .second-section table {
     font-size: 0.9rem;
   }
+  /* support section */
+  .support-section img {
+    margin-top: 40%;
+}
+.support-section .custom-heading {
+margin-top: 60px;
+}
+.support-section .bloc-right{
+  text-align: center;
+  padding: 0px;
+}
+.support-section p {
+  margin: 15px auto;
+}
+
 }
