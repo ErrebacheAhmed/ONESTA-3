@@ -250,7 +250,8 @@
   .h-max-with {
     font-size: 25px;
     margin-top: 20px;
-    max-width: 80%;
+    line-height: 32.61px;
+    max-width: 85%;
   }
 
   .bg-group365 {
