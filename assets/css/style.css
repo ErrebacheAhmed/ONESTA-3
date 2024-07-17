@@ -1527,6 +1527,69 @@ body {
 /* cursor */
 .bg-group365{
   height: 500px;
+  position: relative;
   background: url(../../images/Group350.png) center top / contain no-repeat;
+margin-top: 100px;
+}
+.h-max-with{
+  position: relative;
+  top: -40px;
+  max-width: 44%;
+  margin: 10px auto;
+  font-family: 'Poppins', sans-serif;
+    font-size: 30px;
+    font-weight: 800;
+    line-height: 41.61px;
+    text-align: left;
+    color: #0500FF;
+}
 
+.bg-group365::before{
+  content: url(../../images/Vector2.png);
+    position: absolute;
+    left: -146px;
+    top: -130px;
+}
+.bg-group365::after{
+  content: url(../../images/Vector3.png);
+  position: absolute;
+  right: -118px;
+  top: 42px;
+}
+.imgswith{
+  width: 32px;
+  margin: auto;
+}
+.spntitle{
+  font-family: 'Poppins', sans-serif;
+  font-size: 18.17px;
+  font-weight: 800;
+  line-height: 41.61px;
+  color: #0500FF;
+}
+.p-desc{
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 20px;
+}
+.divpaiment,.divLivraison,.divExpedition,.divRamassage{
+position: relative;
+}
+
+.divRamassage{
+  left: 35px;
+}
+.divExpedition{
+  top: 85px;
+  left: 130px;
+}
+
+.divLivraison{
+  top: 63px;
+  left: 180px;
+}
+.divpaiment{
+  top: 120px;
+  left: 170px;
 }
